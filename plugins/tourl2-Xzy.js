@@ -106,7 +106,7 @@ const handler = async (msg, { conn, command }) => {
   }
 };
 
-handler.command = ['xs'];
+handler.command = ['tourl2'];
 handler.help = ['tourl'];
 handler.tags = ['herramientas'];
 handler.register = true;
