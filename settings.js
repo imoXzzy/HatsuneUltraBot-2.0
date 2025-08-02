@@ -24,7 +24,7 @@ global.owner = [
   [''],
   
 // <-- Número @lid -->
-//  ['', 'Erencito', true],
+  ['1920437612698@lid', 'Erencito', true],
   ['', 'DevAlexJs', true], 
   ['', 'Legna', true]
 ];
