@@ -40,27 +40,27 @@ global.prems = []
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.17' 
 global.vs = '2.2.5'
-global.nameqr = 'YukiBot-MD'
-global.namebot = '✿◟Yυƙι-Sυσυ-Bσƚ◞✿'
+global.nameqr = 'RiasBot-MD'
+global.namebot = '𝑹𝒊𝒂𝒔𝒂𝒏𝑩𝒐𝒕-𝐯3'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
 global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐘𝐮𝐤𝐢-𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✰⪜'
-global.botname = 'ᥡᥙkі sᥙ᥆ᥙ'
-global.wm = '✿◟Yυƙι Sυσυ◞✿'
-global.author = '© mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.textbot = 'Yuki, mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ'
-global.etiqueta = 'ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
+global.packname = '𝐑𝐢𝐚𝐬𝐚𝐧𝐁𝐨𝐭-𝐕3'
+global.botname = '𝕣𝕚𝕒𝕤𝔹𝕠𝕥-𝕧3'
+global.wm = 'ʀɪᴀsʙᴏᴛ-ᴠ3'
+global.author = '© mᥲძᥱ ᑲᥡ 𝑬𝒓𝒆𝒏𝒙𝒛𝒚'
+global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑬𝒓𝒆𝒏𝒙𝒛𝒚'
+global.textbot = '𝐑𝐢𝐚𝐬𝐁𝐨𝐭, mᥲძᥱ ᥕі𝗍һ ᑲᥡ ᴇʀᴇɴxᴢʏ'
+global.etiqueta = 'ˣᶻʸ'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.moneda = '¥enes'
-global.welcom1 = '❍ Edita Con El Comando setwelcome'
-global.welcom2 = '❍ Edita Con El Comando setbye'
+global.welcom1 = '➪ 𝘌𝘥𝘪𝘵𝘢 𝘊𝘰𝘯 𝘌𝘭 𝘊𝘰𝘮𝘢𝘯𝘥𝘰 𝘚𝘦𝘵𝘸𝘦𝘭𝘤𝘰𝘮𝘦'
+global.welcom2 = '➪ 𝘌𝘥𝘪𝘵𝘢 𝘊𝘰𝘯 𝘌𝘭 𝘊𝘰𝘮𝘢𝘯𝘥𝘰 𝘚𝘦𝘵𝘣𝘺𝘦'
 global.banner = 'https://qu.ax/tAExi.jpg'
 global.avatar = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1742678797993.jpeg'
 
