@@ -294,8 +294,7 @@ let txt = `
 ┃➣ sopa
 ┃➣ pvp
 ┃➣ ttt
-╰━━━━━━━━━━━━━━━━━━╯
-`.trim()
+╰━━━━━━━━━━━━━━━━━━╯`.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
 contextInfo: {
