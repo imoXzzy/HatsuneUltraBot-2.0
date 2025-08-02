@@ -8,6 +8,7 @@ let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
 let txt = `
+
 ╭━━━〔 Info-Bot 〕━━━╮
 ┃➣ Cliente     » @${userId.split('@')[0]}
 ┃➣ Modo       » Publico
@@ -293,8 +294,8 @@ let txt = `
 ┃➣ sopa
 ┃➣ pvp
 ┃➣ ttt
-╰━━━━━━━━━━━━━━━━━━╯`.trim()
-
+╰━━━━━━━━━━━━━━━━━━╯
+`.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
 contextInfo: {
