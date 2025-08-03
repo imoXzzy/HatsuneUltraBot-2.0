@@ -70,7 +70,7 @@ global.gp1 = 'https://chat.whatsapp.com/KT1uL01TeY7FJachOJtC83?mode=ac_t'
 global.comunidad1 = 'https://chat.whatsapp.com/KT1uL01TeY7FJachOJtC83?mode=ac_t'
 global.channel = 'https://whatsapp.com/channel/0029VbBBn9R4NViep4KwCT3Z'
 global.channel2 = 'https://whatsapp.com/channel/0029VauhV0E0QeafF9ikAB1G'
-global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
+global.md = 'https://github.com/erenxzy/Hatsune-UltraBot'
 global.correo = 'erenxz01@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
