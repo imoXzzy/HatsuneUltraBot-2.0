@@ -1,13 +1,62 @@
-let handler = async (m, { conn, args }) => {
-let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-let user = global.db.data.users[userId]
-let name = conn.getName(userId)
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime)
-let totalreg = Object.keys(global.db.data.users).length
-let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-let txt = `𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ฅ^•ﻌ•^ฅ
+let handler = async (m, { conn, args }) => {
+  let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+  let user = global.db.data.users[userId]
+  let name = conn.getName(userId)
+  let _uptime = process.uptime() * 1000
+  let uptime = clockString(_uptime)
+  let totalreg = Object.keys(global.db.data.users).length
+  let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
+  let botname = global.namebot || 'Bot'
+  let moneda = global.moneda || 'Coins'
+  let channelRD = { id: 'channel', name: 'Channel' }
+
+  // 20 Decoraciones
+  let decoraciones = [
+    "🌸💙🎤", "💙🎶🌟", "🌌🎶💎", "🎤💙🌸", "🎶🌟💙",
+    "🌺💚🎤", "🌈🎶🌸", "💙💎🎶", "🎵🌸💙", "🌟🎤💙",
+    "🎤🌺💎", "💙🌌🎶", "🌸🌈💚", "💙🎵🌺", "🌟💎🎤",
+    "🎶🌌🌸", "💚💎🎶", "🌈💙🎤", "💙🌸🎵", "🎤🌟💎"
+  ]
+
+  // 20 pares de bordes
+  let bordes = [
+    { top: "╭━━━✦❘༻🌸༺❘✦━━━╮", bottom: "╰━━━✦❘༻🌸༺❘✦━━━╯" },
+    { top: "╔═══*.·:·.☽✧☾.·:·.*═══╗", bottom: "╚═══*.·:·.☽✧☾.·:·.*═══╝" },
+    { top: "┏━━━ 💙 🎤 💙 ━━━┓", bottom: "┗━━━ 💙 🎤 💙 ━━━┛" },
+    { top: "┏━━━━━━━━━━━━━━━━━┓", bottom: "┗━━━━━━━━━━━━━━━━━┛" },
+    { top: "╔═══🎶💙🎶═══╗", bottom: "╚═══🎶💙🎶═══╝" },
+    { top: "╭─💙─🌸─💙─╮", bottom: "╰─💙─🌸─💙─╯" },
+    { top: "❀━━━━━━━❀", bottom: "❀━━━━━━━❀" },
+    { top: "✦───💙───✦", bottom: "✦───💙───✦" },
+    { top: "╭──•✧💙✧•──╮", bottom: "╰──•✧💙✧•──╯" },
+    { top: "╔═💙═🌸═💙═╗", bottom: "╚═💙═🌸═💙═╝" },
+    { top: "╭🌟━━━━━🌟╮", bottom: "╰🌟━━━━━🌟╯" },
+    { top: "╔🎵═════🎵╗", bottom: "╚🎵═════🎵╝" },
+    { top: "┏💎━━━━━━━💎┓", bottom: "┗💎━━━━━━━💎┛" },
+    { top: "╭🌈━━━━━━━🌈╮", bottom: "╰🌈━━━━━━━🌈╯" },
+    { top: "╔🌺═══════🌺╗", bottom: "╚🌺═══════🌺╝" },
+    { top: "✿━━━━━━━✿", bottom: "✿━━━━━━━✿" },
+    { top: "╭✧━━━━━━━✧╮", bottom: "╰✧━━━━━━━✧╯" },
+    { top: "╔★═══════★╗", bottom: "╚★═══════★╝" },
+    { top: "┏➤━━━━━━━➤┓", bottom: "┗➤━━━━━━━➤┛" },
+    { top: "╭❍━━━━━━━❍╮", bottom: "╰❍━━━━━━━❍╯" }
+  ]
+
+  // 20 iconos para comandos
+  let iconosCmd = [
+    "ᰔᩚ", "✦", "❍", "➤", "★", "✧", "✪", "➺", "✿", "➳",
+    "🌸", "💙", "🎤", "🎶", "💎", "🌟", "🌺", "🎵", "🌈", "💚"
+  ]
+
+  // Elecciones aleatorias
+  let deco = decoraciones[Math.floor(Math.random() * decoraciones.length)]
+  let bordeSel = bordes[Math.floor(Math.random() * bordes.length)]
+  let icono = iconosCmd[Math.floor(Math.random() * iconosCmd.length)]
+
+  let txt = `
+${bordeSel.top}
+${deco} 𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ${deco}
 ╭┈─────────────────
 │✎ Cliente ➪ @${userId.split('@')[0]}
 │✎ Modo ➪ Publico
@@ -21,551 +70,526 @@ let txt = `𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 �
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
-❍ Comandos para ver estado e información de la Bot.
-ᰔᩚ *#help • #menu*
+${icono} *#help • #menu*
 > ✦ Ver la lista de comandos de la Bot.
-ᰔᩚ *#uptime • #runtime*
+${icono} *#uptime • #runtime*
 > ✦ Ver tiempo activo o en linea de la Bot.
-ᰔᩚ *#sc • #script*
+${icono} *#sc • #script*
 > ✦ Link del repositorio oficial de la Bot
-ᰔᩚ *#staff • #colaboradores*
+${icono} *#staff • #colaboradores*
 > ✦ Ver la lista de desarrolladores de la Bot.
-ᰔᩚ *#serbot • #serbot code*
+${icono} *#serbot • #serbot code*
 > ✦ Crea una sesión de Sub-Bot.
-ᰔᩚ *#bots • #sockets*
+${icono} *#bots • #sockets*
 > ✦ Ver la lista de Sub-Bots activos.
-ᰔᩚ *#status • #estado*
+${icono} *#status • #estado*
 > ✦ Ver el estado actual de la Bot.
-ᰔᩚ *#links • #grupos*
+${icono} *#links • #grupos*
 > ✦ Ver los enlaces oficiales de la Bot.
-ᰔᩚ *#infobot • #infobot*
+${icono} *#infobot • #infobot*
 > ✦ Ver la información completa de la Bot.
-ᰔᩚ *#sug • #newcommand*
+${icono} *#sug • #newcommand*
 > ✦ Sugiere un nuevo comando.
-ᰔᩚ *#p • #ping*
+${icono} *#p • #ping*
 > ✦ Ver la velocidad de respuesta del Bot.
-ᰔᩚ *#reporte • #reportar*
+${icono} *#reporte • #reportar*
 > ✦ Reporta alguna falla o problema de la Bot.
-ᰔᩚ *#sistema • #system*
+${icono} *#sistema • #system*
 > ✦ Ver estado del sistema de alojamiento.
-ᰔᩚ *#speed • #speedtest*
+${icono} *#speed • #speedtest*
 > ✦ Ver las estadísticas de velocidad de la Bot.
-ᰔᩚ *#views • #usuarios*
+${icono} *#views • #usuarios*
 > ✦ Ver la cantidad de usuarios registrados en el sistema.
-ᰔᩚ *#funciones • #totalfunciones*
+${icono} *#funciones • #totalfunciones*
 > ✦ Ver todas las funciones de la Bot.
-ᰔᩚ *#ds • #fixmsgespera*
+${icono} *#ds • #fixmsgespera*
 > ✦ Eliminar archivos de sesión innecesarios.
-ᰔᩚ *#editautoresponder*
+${icono} *#editautoresponder*
 > ✦ Configurar un Prompt personalizado de la Bot.
 
 • :･ﾟ⊹˚• \`『 Buscadores 』\` •˚⊹:･ﾟ•
 
-❍ Comandos para realizar búsquedas en distintas plataformas.
-ᰔᩚ *#tiktoksearch • #tiktoks*
+${icono} *#tiktoksearch • #tiktoks*
 > ✦ Buscador de videos de tiktok.
-ᰔᩚ *#tweetposts*
+${icono} *#tweetposts*
 > ✦ Buscador de posts de Twitter/X.
-ᰔᩚ *#ytsearch • #yts*
+${icono} *#ytsearch • #yts*
 > ✦ Realiza búsquedas de Youtube.
-ᰔᩚ *#githubsearch*
+${icono} *#githubsearch*
 > ✦ Buscador de usuarios de GitHub.
-ᰔᩚ *#cuevana • #cuevanasearch*
+${icono} *#cuevana • #cuevanasearch*
 > ✦ Buscador de películas/series por Cuevana.
-ᰔᩚ *#google*
+${icono} *#google*
 > ✦ Realiza búsquedas por Google.
-ᰔᩚ *#pin • #pinterest*
+${icono} *#pin • #pinterest*
 > ✦ Buscador de imagenes de Pinterest.
-ᰔᩚ *#imagen • #image*
+${icono} *#imagen • #image*
 > ✦ buscador de imagenes de Google.
-ᰔᩚ *#infoanime*
+${icono} *#infoanime*
 > ✦ Buscador de información de anime/manga.
-ᰔᩚ *#hentaisearch • #searchhentai*
+${icono} *#hentaisearch • #searchhentai*
 > ✦ Buscador de capítulos hentai.
-ᰔᩚ #xnxxsearch • #xnxxs*
+${icono} *#xnxxsearch • #xnxxs*
 > ✦ Buscador de vídeos de Xnxx.
-ᰔᩚ *#xvsearch • #xvideossearch*
+${icono} *#xvsearch • #xvideossearch*
 > ✦ Buscador de vídeos de Xvideos.
-ᰔᩚ *#pornhubsearch • #phsearch*
+${icono} *#pornhubsearch • #phsearch*
 > ✦ Buscador de videos de Pornhub.
-ᰔᩚ *#npmjs*
+${icono} *#npmjs*
 > ✦ Buscandor de npmjs.
 
 • :･ﾟ⊹˚• \`『 Descargas 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de descargas para varios archivos.
-ᰔᩚ *#tiktok • #tt*
+${icono} *#tiktok • #tt*
 > ✦ Descarga videos de TikTok.
-ᰔᩚ *#mediafire • #mf*
+${icono} *#mediafire • #mf*
 > ✦ Descargar un archivo de MediaFire.
-ᰔᩚ *#pinvid • #pinvideo* + [enlacé]
+${icono} *#pinvid • #pinvideo* + [enlace]
 > ✦ Descargar vídeos de Pinterest. 
-ᰔᩚ *#mega • #mg* + [enlacé]
+${icono} *#mega • #mg* + [enlace]
 > ✦ Descargar un archivo de MEGA.
-ᰔᩚ *#play • #play2*
+${icono} *#play • #play2*
 > ✦ Descarga música/video de YouTube.
-ᰔᩚ *#ytmp3 • #ytmp4*
+${icono} *#ytmp3 • #ytmp4*
 > ✦ Descarga música/video de YouTube mediante url.
-ᰔᩚ *#fb • #facebook*
+${icono} *#fb • #facebook*
 > ✦ Descarga videos de Facebook.
-ᰔᩚ *#twitter • #x* + [Link]
+${icono} *#twitter • #x* + [Link]
 > ✦ Descargar un video de Twitter/X
-ᰔᩚ *#ig • #instagram*
+${icono} *#ig • #instagram*
 > ✦ Descarga contenido de Instagram.
-ᰔᩚ *#tts • #tiktoks* + [busqueda]
+${icono} *#tts • #tiktoks* + [busqueda]
 > ✦ Buscar videos de tiktok 
-ᰔᩚ *#terabox • #tb* + [enlace]
+${icono} *#terabox • #tb* + [enlace]
 > ✦ Descargar archivos por Terabox.
-ᰔᩚ *#ttimg • #ttmp3* + <url>
+${icono} *#ttimg • #ttmp3* + <url>
 > ✦ Descarga fotos/audios de tiktok. 
-ᰔᩚ *#gitclone* + <url> 
+${icono} *#gitclone* + <url> 
 > ✦ Descarga un repositorio de github.
-ᰔᩚ *#xvideosdl*
+${icono} *#xvideosdl*
 > ✦ Descarga videos porno de (Xvideos). 
-ᰔᩚ *#xnxxdl*
+${icono} *#xnxxdl*
 > ✦ Descarga videos porno de (xnxx).
-ᰔᩚ *#apk • #modapk*
+${icono} *#apk • #modapk*
 > ✦ Descarga un apk de Aptoide.
-ᰔᩚ *#tiktokrandom • #ttrandom*
+${icono} *#tiktokrandom • #ttrandom*
 > ✦ Descarga un video aleatorio de tiktok.
-ᰔᩚ *#npmdl • #npmdownloader*
+${icono} *#npmdl • #npmdownloader*
 > ✦ Descarga paquetes de NPMJs.
 
 • :･ﾟ⊹˚• \`『 Economia 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de economía y rpg para ganar dinero y otros recursos.
-ᰔᩚ *#w • #work • #trabajar*
+${icono} *#w • #work • #trabajar*
 > ✦ Trabaja para ganar ${moneda}.
-ᰔᩚ *#slut • #protituirse*
+${icono} *#slut • #protituirse*
 > ✦ Trabaja como prostituta y gana ${moneda}.
-ᰔᩚ *#cf • #suerte*
+${icono} *#cf • #suerte*
 > ✦ Apuesta tus ${moneda} a cara o cruz.
-ᰔᩚ *#crime • #crimen
+${icono} *#crime • #crimen*
 > ✦ Trabaja como ladrón para ganar ${moneda}.
-ᰔᩚ *#ruleta • #roulette • #rt*
+${icono} *#ruleta • #roulette • #rt*
 > ✦ Apuesta ${moneda} al color rojo o negro.
-ᰔᩚ *#casino • #apostar*
+${icono} *#casino • #apostar*
 > ✦ Apuesta tus ${moneda} en el casino.
-ᰔᩚ *#slot*
+${icono} *#slot*
 > ✦ Apuesta tus ${moneda} en la ruleta y prueba tu suerte.
-ᰔᩚ *#cartera • #wallet*
+${icono} *#cartera • #wallet*
 > ✦ Ver tus ${moneda} en la cartera.
-ᰔᩚ *#banco • #bank*
+${icono} *#banco • #bank*
 > ✦ Ver tus ${moneda} en el banco.
-ᰔᩚ *#deposit • #depositar • #d*
+${icono} *#deposit • #depositar • #d*
 > ✦ Deposita tus ${moneda} al banco.
-ᰔᩚ *#with • #retirar • #withdraw*
+${icono} *#with • #retirar • #withdraw*
 > ✦ Retira tus ${moneda} del banco.
-ᰔᩚ *#transfer • #pay*
+${icono} *#transfer • #pay*
 > ✦ Transfiere ${moneda} o XP a otros usuarios.
-ᰔᩚ *#miming • #minar • #mine*
+${icono} *#miming • #minar • #mine*
 > ✦ Trabaja como minero y recolecta recursos.
-ᰔᩚ *#buyall • #buy*
+${icono} *#buyall • #buy*
 > ✦ Compra ${moneda} con tu XP.
-ᰔᩚ *#daily • #diario*
+${icono} *#daily • #diario*
 > ✦ Reclama tu recompensa diaria.
-ᰔᩚ *#cofre*
+${icono} *#cofre*
 > ✦ Reclama un cofre diario lleno de recursos.
-ᰔᩚ *#weekly • #semanal*
+${icono} *#weekly • #semanal*
 > ✦ Reclama tu regalo semanal.
-ᰔᩚ *#monthly • #mensual*
+${icono} *#monthly • #mensual*
 > ✦ Reclama tu recompensa mensual.
-ᰔᩚ *#steal • #robar • #rob*
+${icono} *#steal • #robar • #rob*
 > ✦ Intenta robarle ${moneda} a alguien.
-ᰔᩚ *#robarxp • #robxp*
+${icono} *#robarxp • #robxp*
 > ✦ Intenta robar XP a un usuario.
-ᰔᩚ *#eboard • #baltop*
+${icono} *#eboard • #baltop*
 > ✦ Ver el ranking de usuarios con más ${moneda}.
-ᰔᩚ *#aventura • #adventure*
+${icono} *#aventura • #adventure*
 > ✦ Aventúrate en un nuevo reino y recolecta recursos.
-ᰔᩚ *#curar • #heal*
+${icono} *#curar • #heal*
 > ✦ Cura tu salud para volverte aventurar.
-ᰔᩚ *#cazar • #hunt • #berburu*
+${icono} *#cazar • #hunt • #berburu*
 > ✦ Aventúrate en una caza de animales.
-ᰔᩚ *#inv • #inventario*
+${icono} *#inv • #inventario*
 > ✦ Ver tu inventario con todos tus ítems.
-ᰔᩚ *#mazmorra • #explorar*
+${icono} *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
-ᰔᩚ *#halloween*
+${icono} *#halloween*
 > ✦ Reclama tu dulce o truco (Solo en Halloween).
-ᰔᩚ *#christmas • #navidad*
+${icono} *#christmas • #navidad*
 > ✦ Reclama tu regalo navideño (Solo en Navidad).
 
 • :･ﾟ⊹˚• \`『 Gacha 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de gacha para reclamar y colecciónar personajes.
-ᰔᩚ *#rollwaifu • #rw • #roll*
+${icono} *#rollwaifu • #rw • #roll*
 > ✦ Waifu o husbando aleatorio.
-ᰔᩚ  *#claim • #c • #reclamar*
+${icono} *#claim • #c • #reclamar*
 > ✦ Reclamar un personaje.
-ᰔᩚ *#harem • #waifus • #claims*
+${icono} *#harem • #waifus • #claims*
 > ✦ Ver tus personajes reclamados.
-ᰔᩚ *#charimage • #waifuimage • #wimage* 
+${icono} *#charimage • #waifuimage • #wimage* 
 > ✦ Ver una imagen aleatoria de un personaje.
-ᰔᩚ *#charinfo • #winfo • #waifuinfo*
+${icono} *#charinfo • #winfo • #waifuinfo*
 > ✦ Ver información de un personaje.
-ᰔᩚ *#givechar • #givewaifu • #regalar*
+${icono} *#givechar • #givewaifu • #regalar*
 > ✦ Regalar un personaje a otro usuario.
-ᰔᩚ *#vote • #votar*
+${icono} *#vote • #votar*
 > ✦ Votar por un personaje para subir su valor.
-ᰔᩚ *#waifusboard • #waifustop • #topwaifus*
+${icono} *#waifusboard • #waifustop • #topwaifus*
 > ✦ Ver el top de personajes con mayor valor.
 
 • :･ﾟ⊹˚• \`『 Stickers 』\` •˚⊹:･ﾟ•
 
-❍ Comandos para creaciones de stickers etc.
-ᰔᩚ *#sticker • #s*
+${icono} *#sticker • #s*
 > ✦ Crea stickers de (imagen/video)
-ᰔᩚ *#setmeta*
+${icono} *#setmeta*
 > ✦ Estable un pack y autor para los stickers.
-ᰔᩚ *#delmeta*
+${icono} *#delmeta*
 > ✦ Elimina tu pack de stickers.
-ᰔᩚ *#pfp • #getpic*
+${icono} *#pfp • #getpic*
 > ✦ Obtén la foto de perfil de un usuario.
-ᰔᩚ *#qc*
+${icono} *#qc*
 > ✦ Crea stickers con texto o de un usuario.
-ᰔᩚ *#toimg • #img*
+${icono} *#toimg • #img*
 > ✦ Convierte stickers en imagen.
-ᰔᩚ *#brat • #ttp • #attp*︎ 
+${icono} *#brat • #ttp • #attp*
 > ✦ Crea stickers con texto.
-ᰔᩚ *#emojimix*
+${icono} *#emojimix*
 > ✦ Fuciona 2 emojis para crear un sticker.
-ᰔᩚ *#wm*
+${icono} *#wm*
 > ✦ Cambia el nombre de los stickers.
 
-•:･ﾟ⊹˚• \`『 Herramientas 』\` •˚⊹:･ﾟ•
+• :･ﾟ⊹˚• \`『 Herramientas 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de herramientas con muchas funciones.
-ᰔᩚ *#calcular • #calcular • #cal*
+${icono} *#calcular • #calcular • #cal*
 > ✦ Calcular todo tipo de ecuaciones.
-ᰔᩚ *#tiempo • #clima*
+${icono} *#tiempo • #clima*
 > ✦ Ver el clima de un pais.
-ᰔᩚ *#horario*
+${icono} *#horario*
 > ✦ Ver el horario global de los países.
-ᰔᩚ *#fake • #fakereply*
+${icono} *#fake • #fakereply*
 > ✦ Crea un mensaje falso de un usuario.
-ᰔᩚ *#enhance • #remini • #hd*
+${icono} *#enhance • #remini • #hd*
 > ✦ Mejora la calidad de una imagen.
-ᰔᩚ *#letra*
+${icono} *#letra*
 > ✦ Cambia la fuente de las letras.
-ᰔᩚ *#read • #readviewonce • #ver*
+${icono} *#read • #readviewonce • #ver*
 > ✦ Ver imágenes de una sola vista.
-ᰔᩚ *#whatmusic • #shazam*
+${icono} *#whatmusic • #shazam*
 > ✦ Descubre el nombre de canciones o vídeos.
-ᰔᩚ *#ss • #ssweb*
+${icono} *#ss • #ssweb*
 > ✦ Ver el estado de una página web.
-ᰔᩚ *#length • #tamaño*
+${icono} *#length • #tamaño*
 > ✦ Cambia el tamaño de imágenes y vídeos.
-ᰔᩚ *#say • #decir* + [texto]
+${icono} *#say • #decir* + [texto]
 > ✦ Repetir un mensaje.
-ᰔᩚ *#todoc • #toducument*
+${icono} *#todoc • #toducument*
 > ✦ Crea documentos de (audio, imágenes y vídeos).
-ᰔᩚ *#translate • #traducir • #trad*
+${icono} *#translate • #traducir • #trad*
 > ✦ Traduce palabras en otros idiomas.
 
 • :･ﾟ⊹˚• \`『 Perfil 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de perfil para ver, configurar y comprobar estados de tu perfil.
-ᰔᩚ *#reg • #verificar • #register*
+${icono} *#reg • #verificar • #register*
 > ✦ Registra tu nombre y edad en el bot.
-ᰔᩚ *#unreg*
+${icono} *#unreg*
 > ✦ Elimina tu registro del bot.
-ᰔᩚ *#profile*
+${icono} *#profile*
 > ✦ Muestra tu perfil de usuario.
-ᰔᩚ *#marry* [mension / etiquetar]
+${icono} *#marry* [mension / etiquetar]
 > ✦ Propón matrimonio a otro usuario.
-ᰔᩚ *#divorce*
+${icono} *#divorce*
 > ✦ Divorciarte de tu pareja.
-ᰔᩚ *#setgenre • #setgenero*
+${icono} *#setgenre • #setgenero*
 > ✦ Establece tu género en el perfil del bot.
-ᰔᩚ *#delgenre • #delgenero*
+${icono} *#delgenre • #delgenero*
 > ✦ Elimina tu género del perfil del bot.
-ᰔᩚ *#setbirth • #setnacimiento*
+${icono} *#setbirth • #setnacimiento*
 > ✦ Establece tu fecha de nacimiento en el perfil del bot.
-ᰔᩚ *#delbirth • #delnacimiento*
+${icono} *#delbirth • #delnacimiento*
 > ✦ Elimina tu fecha de nacimiento del perfil del bot.
-ᰔᩚ *#setdescription • #setdesc*
+${icono} *#setdescription • #setdesc*
 > ✦ Establece una descripción en tu perfil del bot.
-ᰔᩚ *#deldescription • #deldesc*
+${icono} *#deldescription • #deldesc*
 > ✦ Elimina la descripción de tu perfil del bot.
-ᰔᩚ *#lb • #lboard* + <Paginá>
+${icono} *#lb • #lboard* + <Paginá>
 > ✦ Top de usuarios con más (experiencia y nivel).
-ᰔᩚ *#level • #lvl* + <@Mencion>
+${icono} *#level • #lvl* + <@Mencion>
 > ✦ Ver tu nivel y experiencia actual.
-ᰔᩚ *#comprarpremium • #premium*
+${icono} *#comprarpremium • #premium*
 > ✦ Compra un pase premium para usar el bot sin límites.
-ᰔᩚ *#confesiones • #confesar*
+${icono} *#confesiones • #confesar*
 > ✦ Confiesa tus sentimientos a alguien de manera anonima.
 
 • :･ﾟ⊹˚• \`『 Grupos 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de grupos para una mejor gestión de ellos.
-ᰔᩚ *#hidetag*
+${icono} *#hidetag*
 > ✦ Envia un mensaje mencionando a todos los usuarios
-ᰔᩚ *#gp • #infogrupo*
+${icono} *#gp • #infogrupo*
 > ✦  Ver la Informacion del grupo.
-ᰔᩚ *#linea • #listonline*
+${icono} *#linea • #listonline*
 > ✦ Ver la lista de los usuarios en linea.
-ᰔᩚ *#setwelcome*
+${icono} *#setwelcome*
 > ✦ Establecer un mensaje de bienvenida personalizado.
-ᰔᩚ *#setbye*
+${icono} *#setbye*
 > ✦ Establecer un mensaje de despedida personalizado.
-ᰔᩚ *#link*
+${icono} *#link*
 > ✦ El bot envia el link del grupo.
-ᰔᩚ *admins • admin*
+${icono} *#admins • #admin*
 > ✦ Mencionar a los admins para solicitar ayuda.
-ᰔᩚ *#restablecer • #revoke*
+${icono} *#restablecer • #revoke*
 > ✦ Restablecer el enlace del grupo.
-ᰔᩚ *#grupo • #group* [open / abrir]
+${icono} *#grupo • #group* [open / abrir]
 > ✦ Cambia ajustes del grupo para que todos los usuarios envien mensaje.
-ᰔᩚ *#grupo • #gruop* [close / cerrar]
+${icono} *#grupo • #gruop* [close / cerrar]
 > ✦ Cambia ajustes del grupo para que solo los administradores envien mensaje.
-ᰔᩚ *#kick* [número / mension]
+${icono} *#kick* [número / mension]
 > ✦ Elimina un usuario de un grupo.
-ᰔᩚ *#add • #añadir • #agregar* [número]
+${icono} *#add • #añadir • #agregar* [número]
 > ✦ Invita a un usuario a tu grupo.
-ᰔᩚ *#promote* [mension / etiquetar]
+${icono} *#promote* [mension / etiquetar]
 > ✦ El bot dara administrador al usuario mencionando.
-ᰔᩚ *#demote* [mension / etiquetar]
+${icono} *#demote* [mension / etiquetar]
 > ✦ El bot quitara administrador al usuario mencionando.
-ᰔᩚ *#gpbanner • #groupimg*
+${icono} *#gpbanner • #groupimg*
 > ✦ Cambiar la imagen del grupo.
-ᰔᩚ *#gpname • #groupname*
+${icono} *#gpname • #groupname*
 > ✦ Cambiar el nombre del grupo.
-ᰔᩚ *#gpdesc • #groupdesc*
+${icono} *#gpdesc • #groupdesc*
 > ✦ Cambiar la descripción del grupo.
-ᰔᩚ *#advertir • #warn • #warning*
+${icono} *#advertir • #warn • #warning*
 > ✦ Darle una advertencia aún usuario.
-ᰔᩚ ︎*#unwarn • #delwarn*
+${icono} *#unwarn • #delwarn*
 > ✦ Quitar advertencias.
-ᰔᩚ *#advlist • #listadv*
+${icono} *#advlist • #listadv*
 > ✦ Ver lista de usuarios advertidos.
-ᰔᩚ *#bot on*
+${icono} *#bot on*
 > ✦ Enciende el bot en un grupo.
-ᰔᩚ *#bot off*
+${icono} *#bot off*
 > ✦ Apaga el bot en un grupo.
-ᰔᩚ *#mute* [mension / etiquetar]
+${icono} *#mute* [mension / etiquetar]
 > ✦ El bot elimina los mensajes del usuario.
-ᰔᩚ *#unmute* [mension / etiquetar]
+${icono} *#unmute* [mension / etiquetar]
 > ✦ El bot deja de eliminar los mensajes del usuario.
-ᰔᩚ *#encuesta • #poll*
+${icono} *#encuesta • #poll*
 > ✦ Crea una encuesta.
-ᰔᩚ *#delete • #del*
+${icono} *#delete • #del*
 > ✦ Elimina mensaje de otros usuarios.
-ᰔᩚ *#fantasmas*
+${icono} *#fantasmas*
 > ✦ Ver lista de inactivos del grupo.
-ᰔᩚ *#kickfantasmas*
+${icono} *#kickfantasmas*
 > ✦ Elimina a los inactivos del grupo.
-ᰔᩚ *#invocar • #tagall • #todos*
+${icono} *#invocar • #tagall • #todos*
 > ✦ Invoca a todos los usuarios de un grupo.
-ᰔᩚ *#setemoji • #setemo*
+${icono} *#setemoji • #setemo*
 > ✦ Cambia el emoji que se usa en la invitación de usuarios.
-ᰔᩚ *#listnum • #kicknum*
+${icono} *#listnum • #kicknum*
 > ✦ Elimine a usuario por el prefijo de país.
 
 • :･ﾟ⊹˚• \`『 Anime 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de reacciones de anime.
-ᰔᩚ *#angry • #enojado* + <mencion>
+${icono} *#angry • #enojado* + <mencion>
 > ✦ Estar enojado
-ᰔᩚ *#bite* + <mencion>
+${icono} *#bite* + <mencion>
 > ✦ Muerde a alguien
-ᰔᩚ *#bleh* + <mencion>
+${icono} *#bleh* + <mencion>
 > ✦ Sacar la lengua
-ᰔᩚ *#blush* + <mencion>
+${icono} *#blush* + <mencion>
 > ✦ Sonrojarte
-ᰔᩚ *#bored • #aburrido* + <mencion>
+${icono} *#bored • #aburrido* + <mencion>
 > ✦ Estar aburrido
-ᰔᩚ *#cry* + <mencion>
+${icono} *#cry* + <mencion>
 > ✦ Llorar por algo o alguien
-ᰔᩚ *#cuddle* + <mencion>
+${icono} *#cuddle* + <mencion>
 > ✦ Acurrucarse
-ᰔᩚ *#dance* + <mencion>
+${icono} *#dance* + <mencion>
 > ✦ Sacate los pasitos prohíbidos
-ᰔᩚ *#drunk* + <mencion>
+${icono} *#drunk* + <mencion>
 > ✦ Estar borracho
-ᰔᩚ *#eat • #comer* + <mencion>
+${icono} *#eat • #comer* + <mencion>
 > ✦ Comer algo delicioso
-ᰔᩚ *#facepalm* + <mencion>
+${icono} *#facepalm* + <mencion>
 > ✦ Darte una palmada en la cara
-ᰔᩚ *#happy • #feliz* + <mencion>
+${icono} *#happy • #feliz* + <mencion>
 > ✦ Salta de felicidad
-ᰔᩚ *#hug* + <mencion>
+${icono} *#hug* + <mencion>
 > ✦ Dar un abrazo
-ᰔᩚ *#impregnate • #preg* + <mencion>
+${icono} *#impregnate • #preg* + <mencion>
 > ✦ Embarazar a alguien
-ᰔᩚ *#kill* + <mencion>
+${icono} *#kill* + <mencion>
 > ✦ Toma tu arma y mata a alguien
-ᰔᩚ *#kiss • #besar* • #kiss2 + <mencion>
+${icono} *#kiss • #besar • #kiss2* + <mencion>
 > ✦ Dar un beso
-ᰔᩚ *#laugh* + <mencion>
+${icono} *#laugh* + <mencion>
 > ✦ Reírte de algo o alguien
-ᰔᩚ *#lick* + <mencion>
+${icono} *#lick* + <mencion>
 > ✦ Lamer a alguien
-ᰔᩚ *#love • #amor* + <mencion>
+${icono} *#love • #amor* + <mencion>
 > ✦ Sentirse enamorado
-ᰔᩚ *#pat* + <mencion>
+${icono} *#pat* + <mencion>
 > ✦ Acaricia a alguien
-ᰔᩚ *#poke* + <mencion>
+${icono} *#poke* + <mencion>
 > ✦ Picar a alguien
-ᰔᩚ *#pout* + <mencion>
+${icono} *#pout* + <mencion>
 > ✦ Hacer pucheros
-ᰔᩚ *#punch* + <mencion>
+${icono} *#punch* + <mencion>
 > ✦ Dar un puñetazo
-ᰔᩚ *#run* + <mencion>
+${icono} *#run* + <mencion>
 > ✦ Correr
-ᰔᩚ *#sad • #triste* + <mencion>
+${icono} *#sad • #triste* + <mencion>
 > ✦ Expresar tristeza
-ᰔᩚ *#scared* + <mencion>
+${icono} *#scared* + <mencion>
 > ✦ Estar asustado
-ᰔᩚ *#seduce* + <mencion>
+${icono} *#seduce* + <mencion>
 > ✦ Seducir a alguien
-ᰔᩚ *#shy • #timido* + <mencion>
+${icono} *#shy • #timido* + <mencion>
 > ✦ Sentir timidez
-ᰔᩚ *#slap* + <mencion>
+${icono} *#slap* + <mencion>
 > ✦ Dar una bofetada
-ᰔᩚ *#dias • #days*
+${icono} *#dias • #days*
 > ✦ Darle los buenos días a alguien 
-ᰔᩚ *#noches • #nights*
+${icono} *#noches • #nights*
 > ✦ Darle las buenas noches a alguien 
-ᰔᩚ *#sleep* + <mencion>
+${icono} *#sleep* + <mencion>
 > ✦ Tumbarte a dormir
-ᰔᩚ *#smoke* + <mencion>
+${icono} *#smoke* + <mencion>
 > ✦ Fumar
-ᰔᩚ *#think* + <mencion>
+${icono} *#think* + <mencion>
 > ✦ Pensar en algo
 
 • :･ﾟ⊹˚• \`『 NSFW 』\` •˚⊹:･ﾟ•
 
-❍ Comandos NSFW (Contenido para adultos)
-ᰔᩚ *#anal* + <mencion>
+${icono} *#anal* + <mencion>
 > ✦ Hacer un anal
-ᰔᩚ *#waifu*
+${icono} *#waifu*
 > ✦ Buscá una waifu aleatorio.
-ᰔᩚ *#bath* + <mencion>
+${icono} *#bath* + <mencion>
 > ✦ Bañarse
-ᰔᩚ *#blowjob • #mamada • #bj* + <mencion>
+${icono} *#blowjob • #mamada • #bj* + <mencion>
 > ✦ Dar una mamada
-ᰔᩚ *#boobjob* + <mencion>
+${icono} *#boobjob* + <mencion>
 > ✦ Hacer una rusa
-ᰔᩚ *#cum* + <mencion>
+${icono} *#cum* + <mencion>
 > ✦ Venirse en alguien.
-ᰔᩚ *#fap* + <mencion>
+${icono} *#fap* + <mencion>
 > ✦ Hacerse una paja
-ᰔᩚ *#ppcouple • #ppcp*
+${icono} *#ppcouple • #ppcp*
 > ✦ Genera imagenes para amistades o parejas.
-ᰔᩚ *#footjob* + <mencion>
+${icono} *#footjob* + <mencion>
 > ✦ Hacer una paja con los pies
-ᰔᩚ *#fuck • #coger • #fuck2* + <mencion>
+${icono} *#fuck • #coger • #fuck2* + <mencion>
 > ✦ Follarte a alguien
-ᰔᩚ *#cafe • #coffe*
+${icono} *#cafe • #coffe*
 > ✦ Tomate un cafecito con alguien
-ᰔᩚ *#violar • #perra + <mencion>
+${icono} *#violar • #perra* + <mencion>
 > ✦ Viola a alguien
-ᰔᩚ *#grabboobs* + <mencion>
-> ✦ Agarrrar tetas
-ᰔᩚ *#grop* + <mencion>
+${icono} *#grabboobs* + <mencion>
+> ✦ Agarrar tetas
+${icono} *#grop* + <mencion>
 > ✦ Manosear a alguien
-ᰔᩚ *#lickpussy* + <mencion>
+${icono} *#lickpussy* + <mencion>
 > ✦ Lamer un coño
-ᰔᩚ *#rule34 • #r34* + [Tags]
+${icono} *#rule34 • #r34* + [Tags]
 > ✦ Buscar imagenes en Rule34
-ᰔᩚ *#sixnine • #69* + <mencion>
+${icono} *#sixnine • #69* + <mencion>
 > ✦ Haz un 69 con alguien
-ᰔᩚ *#spank • #nalgada* + <mencion>
+${icono} *#spank • #nalgada* + <mencion>
 > ✦ Dar una nalgada
-ᰔᩚ *#suckboobs* + <mencion>
+${icono} *#suckboobs* + <mencion>
 > ✦ Chupar tetas
-ᰔᩚ *#undress • #encuerar* + <mencion>
+${icono} *#undress • #encuerar* + <mencion>
 > ✦ Desnudar a alguien
-ᰔᩚ *#yuri • #tijeras* + <mencion>
+${icono} *#yuri • #tijeras* + <mencion>
 > ✦ Hacer tijeras.
 
 • :･ﾟ⊹˚• \`『 Juegos 』\` •˚⊹:･ﾟ•
 
-❍ Comandos de juegos para jugar con tus amigos.
-ᰔᩚ *#amistad • #amigorandom* 
-> ✦ hacer amigos con un juego. 
-ᰔᩚ *#chaqueta • #jalamela*
+${icono} *#amistad • #amigorandom* 
+> ✦ Hacer amigos con un juego. 
+${icono} *#chaqueta • #jalamela*
 > ✦ Hacerte una chaqueta.
-ᰔᩚ *#chiste*
+${icono} *#chiste*
 > ✦ La bot te cuenta un chiste.
-ᰔᩚ *#consejo* 
+${icono} *#consejo* 
 > ✦ La bot te da un consejo. 
-ᰔᩚ *#doxeo • #doxear* + <mencion>
+${icono} *#doxeo • #doxear* + <mencion>
 > ✦ Simular un doxeo falso.
-ᰔᩚ *#facto*
+${icono} *#facto*
 > ✦ La bot te lanza un facto. 
-ᰔᩚ *#formarpareja*
+${icono} *#formarpareja*
 > ✦ Forma una pareja. 
-ᰔᩚ *#formarpareja5*
+${icono} *#formarpareja5*
 > ✦ Forma 5 parejas diferentes.
-ᰔᩚ *#frase*
+${icono} *#frase*
 > ✦ La bot te da una frase.
-ᰔᩚ *#huevo*
+${icono} *#huevo*
 > ✦ Agarrale el huevo a alguien.
-ᰔᩚ *#chupalo* + <mencion>
+${icono} *#chupalo* + <mencion>
 > ✦ Hacer que un usuario te la chupe.
-ᰔᩚ *#aplauso* + <mencion>
+${icono} *#aplauso* + <mencion>
 > ✦ Aplaudirle a alguien.
-ᰔᩚ *#marron* + <mencion>
+${icono} *#marron* + <mencion>
 > ✦ Burlarte del color de piel de un usuario. 
-ᰔᩚ *#suicidar*
+${icono} *#suicidar*
 > ✦ Suicidate. 
-ᰔᩚ *#iq • #iqtest* + <mencion>
+${icono} *#iq • #iqtest* + <mencion>
 > ✦ Calcular el iq de alguna persona. 
-ᰔᩚ *#meme*
+${icono} *#meme*
 > ✦ La bot te envía un meme aleatorio. 
-ᰔᩚ *#morse*
+${icono} *#morse*
 > ✦ Convierte un texto a codigo morse. 
-ᰔᩚ *#nombreninja*
+${icono} *#nombreninja*
 > ✦ Busca un nombre ninja aleatorio. 
-ᰔᩚ *#paja • #pajeame* 
+${icono} *#paja • #pajeame* 
 > ✦ La bot te hace una paja.
-ᰔᩚ *#personalidad* + <mencion>
+${icono} *#personalidad* + <mencion>
 > ✦ La bot busca tu personalidad. 
-ᰔᩚ *#piropo*
+${icono} *#piropo*
 > ✦ Lanza un piropo.
-ᰔᩚ *#pregunta*
+${icono} *#pregunta*
 > ✦ Hazle una pregunta a la bot.
-ᰔᩚ *#ship • #pareja*
+${icono} *#ship • #pareja*
 > ✦ La bot te da la probabilidad de enamorarte de una persona. 
-ᰔᩚ *#sorteo*
+${icono} *#sorteo*
 > ✦ Empieza un sorteo. 
-ᰔᩚ *#top*
+${icono} *#top*
 > ✦ Empieza un top de personas.
-ᰔᩚ *#formartrio* + <mencion>
+${icono} *#formartrio* + <mencion>
 > ✦ Forma un trio.
-ᰔᩚ *#ahorcado*
-> ✦ Diviertete con la bot jugando el juego ahorcado.
-ᰔᩚ *#mates • #matematicas*
+${icono} *#ahorcado*
+> ✦ Diviértete con la bot jugando el juego ahorcado.
+${icono} *#mates • #matematicas*
 > ✦ Responde las preguntas de matemáticas para ganar recompensas.
-ᰔᩚ *#ppt*
+${icono} *#ppt*
 > ✦ Juega piedra papel o tijeras con la bot.
-ᰔᩚ *#sopa • #buscarpalabra*
+${icono} *#sopa • #buscarpalabra*
 > ✦ Juega el famoso juego de sopa de letras.
-ᰔᩚ *#pvp • #suit* + <mencion>
+${icono} *#pvp • #suit* + <mencion>
 > ✦ Juega un pvp contra otro usuario.
-ᰔᩚ *#ttt*
-> ✦ Crea una sala de juego.`.trim()
+${icono} *#ttt*
+> ✦ Crea una sala de juego.
 
-/* await conn.sendMessage(m.chat, { 
-text: txt,
-contextInfo: {
-mentionedJid: [userId],
-externalAdReply: {                
-title: botname,
-body: textbot,
-mediaType: 1,
-mediaUrl: redes,
-sourceUrl: redes,
-thumbnail: await (await fetch(banner)).buffer(),
-showAdAttribution: false,
-containsAutoReply: true,
-renderLargerThumbnail: true
-}}}, { quoted: m }) */
+${bordeSel.bottom}
+`.trim()
 
-await conn.sendMessage(m.chat, {
+  await conn.sendMessage(m.chat, {
     video: { url: 'https://cdn.russellxz.click/72b0b493.mp4' },
     gifPlayback: true,
     caption: txt,
@@ -583,15 +607,15 @@ await conn.sendMessage(m.chat, {
   });
 }
 
-handler.help = ['menu']
+handler.help = ['menu2']
 handler.tags = ['main']
-handler.command = ['menu', 'menú', 'help']
+handler.command = ['menu2', 'menú2']
 
 export default handler
 
 function clockString(ms) {
-let seconds = Math.floor((ms / 1000) % 60)
-let minutes = Math.floor((ms / (1000 * 60)) % 60)
-let hours = Math.floor((ms / (1000 * 60 * 60)) % 24)
-return `${hours}h ${minutes}m ${seconds}s`
+  let seconds = Math.floor((ms / 1000) % 60)
+  let minutes = Math.floor((ms / (1000 * 60)) % 60)
+  let hours = Math.floor((ms / (1000 * 60 * 60)) % 24)
+  return `${hours}h ${minutes}m ${seconds}s`
 }
