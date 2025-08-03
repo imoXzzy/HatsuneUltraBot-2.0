@@ -10,7 +10,7 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 let txt = `
 ╭━━〔 𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ฅ^•ﻌ•^ฅ 〕━━╮
 ┃ ✎ Usuario: @${userId.split('@')[0]}
-┃ ✎ Modo: Publico
+┃ ✎ Modo: Privada
 ┃ ✎ Bot: *${botname}*
 ┃ ✎ Tipo: ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub Bot 🅑')}
 ┃ ✎ Activa: ${uptime}
