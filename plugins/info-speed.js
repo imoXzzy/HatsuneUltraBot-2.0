@@ -20,21 +20,22 @@ let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats
 let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
 
 
-let texto = `${emoji} *${packname}*
-🚀 *Velocidad:*
-→ ${latensi.toFixed(4)}
-
-🕒 *Activo Durante:*
-→ ${muptime}
-
-💫 *Chats:*
-→ ${chats.length} *Chats privados*
-→ ${groups.length} *Grupos*
-
-🏆 *Servidor:*
-➤ *Ram ⪼* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
-
-m.react('✈️')
+  let texto = `
+╭━━━〔 📈 𝗗𝗜𝗔𝗚𝗡𝗢́𝗦𝗧𝗜𝗖𝗢 𝗛𝗔𝗧𝗦𝗨𝗡𝗘-𝗕𝗢𝗧 〕━━━╮
+┃ ✦ *Velocidad de Respuesta:* ${latencia.toFixed(4)} ms
+┃ ✦ *Tiempo Activo:* ${uptime}
+┃ ✦ *Sesiones Activas:*
+┃    ➤ ${chats.length} chats privados
+┃    ➤ ${grupos.length} grupos
+┃
+┃ ✦ *Memoria RAM:*
+┃    ➤ En uso: ${format(totalmem() - freemem())}
+┃    ➤ Total:  ${format(totalmem())}
+┃
+┃ ✦ *Estado:* ✅ Hatsune Esta operando con eficiencia táctica.
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+`.trim()
+m.react('⚡')
 
 conn.reply(m.chat, texto, m, )
 
