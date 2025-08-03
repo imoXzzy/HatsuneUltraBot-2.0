@@ -10,6 +10,7 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 let txt = `
 
 ╭━━━〔 Info-Bot 〕━━━╮
+┃➣ Soy *${botname}*, tu bot virtual.
 ┃➣ Cliente     » @${userId.split('@')[0]}
 ┃➣ Modo       » Publico
 ┃➣ Bot        » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
