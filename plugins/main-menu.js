@@ -549,7 +549,7 @@ let txt = `𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 �
 ᰔᩚ *#ttt*
 > ✦ Crea una sala de juego.`.trim()
 
-await conn.sendMessage(m.chat, { 
+/* await conn.sendMessage(m.chat, { 
 text: txt,
 contextInfo: {
 mentionedJid: [userId],
@@ -563,7 +563,24 @@ thumbnail: await (await fetch(banner)).buffer(),
 showAdAttribution: false,
 containsAutoReply: true,
 renderLargerThumbnail: true
-}}}, { quoted: m })
+}}}, { quoted: m }) */
+
+await conn.sendMessage(m.chat, {
+    video: { url: 'https://cdn.russellxz.click/72b0b493.mp4' },
+    gifPlayback: true,
+    caption: txt,
+    contextInfo: {
+      mentionedJid: [m.sender, userId],
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: channelRD.id,
+        newsletterName: channelRD.name,
+      },
+    }
+  },
+  {
+    quoted: m
+  });
 }
 
 handler.help = ['menu']
