@@ -550,22 +550,22 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 ᰔᩚ *#ttt*
 > ✦ Crea una sala de juego.`.trim()
 
-await conn.sendMessage(m.chat, { 
-text: txt,
-contextInfo: {
-mentionedJid: [userId],
-externalAdReply: {                
-title: botname,
-body: textbot,
-mediaType: 1,
-mediaUrl: redes,
-sourceUrl: redes,
-thumbnail: await (await fetch(banner)).buffer(),
-showAdAttribution: false,
-containsAutoReply: true,
-renderLargerThumbnail: true
-}}}, { quoted: m })
-}
+await conn.sendMessage(m.chat, {
+  video: { url: 'https://cdn.russellxz.click/2ccc020f.mp4' }, // Reemplaza por tu video
+  caption: txt,
+  gifPlayback: true, // Esto hace que se reproduzca como bucle tipo gif (opcional)
+  contextInfo: {
+    mentionedJid: [userId],
+    externalAdReply: {
+      title: botname,
+      body: textbot,
+      mediaType: 1,
+      sourceUrl: redes,
+      showAdAttribution: false,
+      renderLargerThumbnail: true
+    }
+  }
+}, { quoted: m })
 
 handler.help = ['menu']
 handler.tags = ['main']
