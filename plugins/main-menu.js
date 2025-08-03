@@ -27,6 +27,8 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ uptime | status | system
 ┃ ✦ funciones | sc | serbot
 ┃ ✦ speed | reporte | links | code
+┃ ✦ staff | bots | views
+┃ ✦ sug | ds | editautoresponder
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🔍 𝗕𝗨𝗦𝗖𝗔𝗗𝗢𝗥𝗘𝗦 〕━━━╮
@@ -34,6 +36,7 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ githubsearch | cuevana | infoanime
 ┃ ✦ xnxxsearch | xvsearch | phsearch
 ┃ ✦ npmjs | tiktoksearch | imagen
+┃ ✦ tweetposts | hentaisearch
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 📥 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 〕━━━╮
@@ -41,14 +44,20 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ tt | fb | ig | x
 ┃ ✦ mediafire | mega | terabox
 ┃ ✦ gitclone | npmdl | ttmp3 | tts
+┃ ✦ pinvid | pinvideo | pin
+┃ ✦ xvideosdl | xnxxdl | apk
+┃ ✦ tiktokrandom | tb
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 💰 𝗘𝗖𝗢𝗡𝗢𝗠𝗜𝗔 〕━━━╮
 ┃ ✦ work | cf | crime | ruleta
+┃ ✦ casino | slot | slut
 ┃ ✦ cartera | banco | deposit | with
 ┃ ✦ daily | weekly | cofre | monthly
 ┃ ✦ aventura | hunt | mine | mazmorra
 ┃ ✦ steal | robarxp | eboard
+┃ ✦ buyall | transfer | curar
+┃ ✦ halloween | christmas
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🎲 𝗚𝗔𝗖𝗛𝗔 〕━━━╮
@@ -61,6 +70,7 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ sticker | toimg | wm
 ┃ ✦ ttp | attp | qc
 ┃ ✦ setmeta | delmeta | emojimix
+┃ ✦ pf | getpic
 ╰━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🛠️ 𝗛𝗘𝗥𝗥𝗔𝗠𝗜𝗘𝗡𝗧𝗔𝗦 〕━━━╮
@@ -68,11 +78,12 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ calcular | letra | tiempo
 ┃ ✦ horario | say | translate
 ┃ ✦ enhance | read | todoc
+┃ ✦ fake | remini
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 📝 𝗣𝗘𝗥𝗙𝗜𝗟 〕━━━╮
 ┃ ✦ reg | profile | unreg
-┃ ✦ marry | divorce
+┃ ✦ marry | divorce | confesar
 ┃ ✦ setgenre | setbirth | setdescription
 ┃ ✦ delgenre | delbirth | deldescription
 ┃ ✦ level | lb | premium
@@ -85,7 +96,11 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ gpname | gpdesc | gpbanner
 ┃ ✦ advertir | unwarn | advlist
 ┃ ✦ mute | unmute | delete
-┃ ✦ encuesta | grupo
+┃ ✦ encuesta | grupo | hidetag
+┃ ✦ gp | linea | invocar
+┃ ✦ setemoji | listnum
+┃ ✦ fantasmas | kickfantasmas
+┃ ✦ bot on | bot off
 ╰━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🌸 𝗔𝗡𝗜𝗠𝗘 〕━━━╮
@@ -93,12 +108,20 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ kiss | love | impregnate
 ┃ ✦ sleep | noches | dias
 ┃ ✦ facepalm | laugh | scared
+┃ ✦ shy | slap | pat | poke
+┃ ✦ happy | bored | cuddle
+┃ ✦ kill | dance | lick | pout
+┃ ✦ run | seduce | smoke | think
 ╰━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🔞 𝗡𝗦𝗙𝗪 〕━━━╮
 ┃ ✦ fuck | blowjob | spank
 ┃ ✦ lickpussy | boobjob | bath
 ┃ ✦ undress | cum | fap | suckboobs
+┃ ✦ anal | waifu | footjob
+┃ ✦ rule34 | sixnine | yuri
+┃ ✦ grop | grabboobs | violar
+┃ ✦ ppcouple
 ╰━━━━━━━━━━━━━━━━━╯
 
 ╭━━━〔 🎮 𝗝𝗨𝗘𝗚𝗢𝗦 〕━━━╮
@@ -106,6 +129,11 @@ let handler = async (m, { conn, args }) => {
 ┃ ✦ formarpareja | ship | personalidad
 ┃ ✦ ppt | mates | ahorcado
 ┃ ✦ pregunta | sorteo | top
+┃ ✦ amistad | doxeo | iq | meme
+┃ ✦ paja | chaqueta | chupalo | huevo
+┃ ✦ aplauso | suicidar | marron
+┃ ✦ morse | nombreninja | formartrio
+┃ ✦ pvp | sopa | ttt
 ╰━━━━━━━━━━━━━━━━━╯`.trim()
 
   await conn.sendMessage(m.chat, {
