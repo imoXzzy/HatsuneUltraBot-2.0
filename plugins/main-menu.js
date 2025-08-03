@@ -9,17 +9,17 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 
 let txt = `
 ╭━━〔 𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ฅ^•ﻌ•^ฅ 〕━━╮
-┃ 👤 Usuario: @${userId.split('@')[0]}
-┃ 🧿 Modo: Publico
-┃ 🤖 Bot: *${botname}*
-┃ 🔰 Tipo: ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub Bot 🅑')}
-┃ ⏱️ Activa: ${uptime}
-┃ 🧮 Usuarios: ${totalreg}
-┃ 🧩 Comandos: ${totalCommands}
-┃ 📡 Plataforma: Baileys-MD
+┃ ✎ Usuario: @${userId.split('@')[0]}
+┃ ✎ Modo: Publico
+┃ ✎ Bot: *${botname}*
+┃ ✎ Tipo: ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub Bot 🅑')}
+┃ ✎ Activa: ${uptime}
+┃ ✎ Usuarios: ${totalreg}
+┃ ✎ Comandos: ${totalCommands}
+┃ ✎ Plataforma: Baileys-MD
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 💠 𝙸𝚗𝚏𝚘 𝙱𝚘𝚝 〕━━━╮
+╭━━━〔 📜 𝗜𝗡𝗙𝗢 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 〕━━━╮
 ┃ ✦ menu | help
 ┃ ✦ uptime | runtime
 ┃ ✦ infobot
@@ -31,9 +31,10 @@ let txt = `
 ┃ ✦ speed | ping
 ┃ ✦ reporte | reportar
 ┃ ✦ links | grupos
+┃ ✦ code | Qr
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🔍 𝙱𝚞𝚜𝚌𝚊𝚍𝚘𝚛𝚎𝚜 〕━━━╮
+╭━━━〔 🔍 𝗕𝗨𝗦𝗖𝗔𝗗𝗢𝗥𝗘𝗦 〕━━━╮
 ┃ ✦ ytsearch | tiktoksearch
 ┃ ✦ pin | imagen | pinterest
 ┃ ✦ google | githubsearch
@@ -42,7 +43,7 @@ let txt = `
 ┃ ✦ npmjs
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 📥 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚜 〕━━━╮
+╭━━━〔 📥 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 〕━━━╮
 ┃ ✦ play | ytmp3 | ytmp4
 ┃ ✦ tt | fb | ig | x
 ┃ ✦ mediafire | mega | terabox
@@ -50,7 +51,7 @@ let txt = `
 ┃ ✦ tiktokrandom | ttmp3 | tts
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 💰 𝙴𝚌𝚘𝚗𝚘𝚖í𝚊  〕━━━╮
+╭━━━〔 💰 𝗘𝗖𝗢𝗡𝗢𝗠𝗜𝗔  〕━━━╮
 ┃ ✦ work | cf | crime | ruleta
 ┃ ✦ cartera | banco | deposit | with | transfer
 ┃ ✦ daily | cofre | weekly | monthly
@@ -59,21 +60,21 @@ let txt = `
 ┃ ✦ eboard
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🎲 𝙶𝚊𝚌𝚑𝚊 〕━━━╮
+╭━━━〔 🎲 𝗚𝗔𝗖𝗛𝗔 〕━━━╮
 ┃ ✦ rollwaifu | claim | harem
 ┃ ✦ waifusboard | vote
 ┃ ✦ charinfo | charimage
 ┃ ✦ givechar
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🧩 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝚜 〕━━━╮
+╭━━━〔 🧩 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 〕━━━╮
 ┃ ✦ sticker | toimg | wm
 ┃ ✦ ttp | attp | qc
 ┃ ✦ setmeta | delmeta
 ┃ ✦ emojimix
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🛠️ 𝙷𝚎𝚛𝚛𝚊𝚖𝚒𝚎𝚗𝚝𝚊𝚜 〕━━━╮
+╭━━━〔 🛠️ 𝗛𝗘𝗥𝗥𝗔𝗠𝗜𝗘𝗡𝗧𝗔𝗦 〕━━━╮
 ┃ ✦ whatmusic | ss | length
 ┃ ✦ calcular | letra
 ┃ ✦ tiempo | horario
@@ -81,7 +82,7 @@ let txt = `
 ┃ ✦ enhance | read | todoc
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🙍 𝙿𝚎𝚛𝚏𝚒𝚕 〕━━━╮
+╭━━━〔 📝 𝗣𝗘𝗥𝗙𝗜𝗟 〕━━━╮
 ┃ ✦ reg | profile | unreg
 ┃ ✦ marry | divorce
 ┃ ✦ setgenre | setbirth | setdescription
@@ -89,7 +90,7 @@ let txt = `
 ┃ ✦ level | lb | premium
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🧑‍🤝‍🧑 𝙶𝚛𝚞𝚙𝚘𝚜 〕━━━╮
+╭━━━〔 👥 𝗚𝗥𝗨𝗣𝗢𝗦 〕━━━╮
 ┃ ✦ link | restablecer | setwelcome | setbye
 ┃ ✦ add | kick | promote | demote
 ┃ ✦ gpname | gpdesc | gpbanner
@@ -98,21 +99,21 @@ let txt = `
 ┃ ✦ encuesta | grupo
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🧸 𝙰𝚗𝚒𝚖𝚎 〕━━━╮
+╭━━━〔 🌸 𝗔𝗡𝗜𝗠𝗘 〕━━━╮
 ┃ ✦ angry | cry | blush | hug
 ┃ ✦ kiss | love | impregnate
 ┃ ✦ sleep | noches | dias
 ┃ ✦ facepalm | laugh | scared
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🔞 𝙽𝚂𝙵𝚆 〕━━━╮
+╭━━━〔 🔞 𝗡𝗦𝗙𝗪 〕━━━╮
 ┃ ✦ fuck | blowjob | spank
 ┃ ✦ lickpussy | boobjob
 ┃ ✦ bath | undress
 ┃ ✦ cum | fap | suckboobs
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 🎮 𝙹𝚞𝚎𝚐𝚘𝚜 〕━━━╮
+╭━━━〔 🎮 𝗝𝗨𝗘𝗚𝗢𝗦 〕━━━╮
 ┃ ✦ chiste | piropo | frase | facto
 ┃ ✦ formarpareja | ship | personalidad
 ┃ ✦ ppt | mates | ahorcado
