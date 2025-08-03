@@ -1,41 +1,42 @@
-import { WAMessageStubType } from '@whiskeysockets/baileys'
-import fetch from 'node-fetch'
+// plugins/welcome.js
 
-export async function before(m, { conn, participants, groupMetadata }) {
-  if (!m.messageStubType || !m.isGroup) return !0;
-  const fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net"}  
-  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://cdn.russellxz.click/459c99c9.jpeg')
-  let img = await (await fetch(`${pp}`)).buffer()
+let handler = async (m, { conn }) => {
+  // Obtenemos info del grupo
   let chat = global.db.data.chats[m.chat]
-  let txt = '𝑁𝑈𝐸𝑉𝑂 𝑀𝐼𝑀𝐸𝐵𝑅𝑂'
-  let txt1 = '𝐴𝐷𝐼𝑂𝑆 𝑀𝐼𝑀𝐸𝐵𝑅𝑂'
-  let groupSize = participants.length
-  if (m.messageStubType == 27) {
-    groupSize++;
-  } else if (m.messageStubType == 28 || m.messageStubType == 32) {
-    groupSize--;
+  let groupMetadata = m.isGroup ? await conn.groupMetadata(m.chat) : {}
+  let groupSize = groupMetadata.participants.length
+
+  // Imagen para la bienvenida (puedes cambiar el link)
+  let img = 'https://cdn.russellxz.click/459c99c9.jpeg'
+
+  // Mensaje de bienvenida
+  if (chat.welcome && m.messageStubType == 27) {
+    let bienvenida = `╭━━━〔 🌸 𝑩𝒊𝒆𝒏𝒗𝒆𝒏𝒊𝒅𝒐 🌸 〕━━━╮
+┃ ✦ Hola @${m.messageStubParameters[0].split`@`[0]}!
+┃ ✦ Bienvenido a *${groupMetadata.subject}*
+┃ ✦ ${global.welcom1 || 'Nos alegra tenerte aquí 💖'}
+┃ ✦ Ahora somos *${groupSize}* miembros 🎉
+┃ ✦ Disfruta tu estadía con nosotros 🐾
+┃ ✐ Más info aquí: 🌐 https://erenxsit.vercel.app
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+•(=^●ω●^=)• ¡Esperamos que la pases genial!`
+
+    await conn.sendMessage(m.chat, { image: { url: img }, caption: bienvenida, mentions: [m.messageStubParameters[0]] })
   }
 
-  if (chat.welcome && m.messageStubType == 27) {
-    let bienvenida = `🌟 *Bienvenido* a ${groupMetadata.subject}
-> ✦ @${m.messageStubParameters[0].split`@`[0]}
-${global.welcom1}
-> ✦ Ahora somos ${groupSize} Miembros.
-> ✦ Disfruta tu estadía en el grupo!
-> ✐ Más info aquí: 🌐 https://erenxsit.vercel.app`
-    
-    await conn.sendMini(m.chat, txt, dev, bienvenida, img, img, redes, fkontak)
-}
-  
-  if (chat.welcome && (m.messageStubType == 28 || m.messageStubType == 32)) {
-    if (chat.welcome && m.messageStubType == 28) {
-    if (chat.welcome && m.messageStubType == 28) {
-    let bye = `🌙 *Adiós* de ${groupMetadata.subject}
-> ✦ @${m.messageStubParameters[0].split`@`[0]}
-${global.welcom2}
-> ✦ Ahora somos ${groupSize} Miembros.
-> ✦ Te esperamos pronto!
-> ✐ Más info aquí: 🌐 https://erenxsit.vercel.app`
+  // Mensaje de despedida
+  if (chat.welcome && m.messageStubType == 28) {
+    let bye = `╭━━━〔 🌙 𝑫𝒆𝒔𝒑𝒆𝒅𝒊𝒅𝒂 🌙 〕━━━╮
+┃ ✦ Adiós @${m.messageStubParameters[0].split`@`[0]}
+┃ ✦ ${global.welcom2 || 'Esperamos verte pronto 💫'}
+┃ ✦ Ahora somos *${groupSize}* miembros
+┃ ✦ ¡Te extrañaremos en el grupo! 🌌
+┃ ✐ Más info aquí: 🌐 https://erenxsit.vercel.app
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+•(=^●ω●^=)• ¡Suerte en tu camino!`
 
-    await conn.sendMini(m.chat, txt1, dev, bye, img, img, redes, fkontak)
+    await conn.sendMessage(m.chat, { image: { url: img }, caption: bye, mentions: [m.messageStubParameters[0]] })
+  }
 }
+
+export default handler
