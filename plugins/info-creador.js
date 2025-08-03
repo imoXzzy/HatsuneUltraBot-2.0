@@ -2,12 +2,12 @@ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn }) => {
   const suittag = '18493907272' // Número sin "+" ni "@s.whatsapp.net"
-  const botname = 'RukiaXzyBot'
+  const botname = 'HatsuneUltraBot'
   const correo = 'erenxz01@gmail.com'
   const md = 'https://github.com/erenxzy/Rukia-Botv2'
   const channel = 'https://whatsapp.com/channel/XXXX'
-  const packname = 'XzyV2'
-  const dev = 'Rukiav2'
+  const packname = 'HatsuneBot'
+  const dev = 'Erenxzy'
 
   await m.react('🥷🏻')
 
@@ -29,9 +29,9 @@ let handler = async (m, { conn }) => {
   await sendContactArray(conn, who, [
     [
       suittag,
-      `🥷🏻 RukiaCreator`,
+      `🥷🏻 Erenxzy`,
       botname,
-      `No spam`,
+      `No Spam`,
       correo,
       `Tokio`,
       md,
@@ -39,11 +39,11 @@ let handler = async (m, { conn }) => {
     ],
     [
       conn.user.jid.split('@')[0],
-      `XzyBot✨`,
+      `HatsuneProyectBot`,
       packname,
       dev,
       correo,
-      `antiprivado on `,
+      `Bot Privado`,
       channel,
       bioBot
     ]
