@@ -607,9 +607,9 @@ ${bordeSel.bottom}
   });
 }
 
-handler.help = ['menu2']
+handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu2', 'menú2']
+handler.command = ['menu', 'menú','help']
 
 export default handler
 
