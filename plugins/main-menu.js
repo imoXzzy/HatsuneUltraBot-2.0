@@ -10,6 +10,15 @@ let handler = async (m, { conn, args }) => {
   let botname = global.namebot || 'Bot'
   let moneda = global.moneda || 'Coins'
   let channelRD = { id: 'channel', name: 'Channel' }
+  let rcanal = {
+    contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: channelRD.id,
+        newsletterName: channelRD.name,
+      },
+    }
+  }
 
   // 20 Decoraciones
   let decoraciones = [
@@ -607,9 +616,9 @@ ${bordeSel.bottom}
   });
 }
 
-handler.help = ['menu']
+handler.help = ['menu2']
 handler.tags = ['main']
-handler.command = ['menu', 'menú','help']
+handler.command = ['menu2', 'menú2']
 
 export default handler
 
