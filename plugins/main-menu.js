@@ -1,316 +1,308 @@
 let handler = async (m, { conn, args }) => {
-let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-let user = global.db.data.users[userId]
-let name = conn.getName(userId)
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime)
-let totalreg = Object.keys(global.db.data.users).length
-let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
-    
-let txt = `
+  let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+  let user = global.db.data.users[userId]
+  let name = conn.getName(userId)
+  let _uptime = process.uptime() * 1000
+  let uptime = clockString(_uptime)
+  let totalreg = Object.keys(global.db.data.users).length
+  let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-╭━━━〔 Info-Bot 〕━━━╮
-┃➣ Soy *${botname}*, tu bot virtual.
-┃➣ Cliente     » @${userId.split('@')[0]}
-┃➣ Modo       » Publico
-┃➣ Bot        » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-┃➣ Activada   » ${uptime}
-┃➣ Usuarios   » ${totalreg}
-┃➣ Comandos   » ${totalCommands}
-┃➣ Baileys    » Multi Device
-╰━━━━━━━━━━━━━━━━━━╯
+  let txt = `
+╭━━━〔 『 Info-Bot 』 〕━━━╮
+➣ help • menu
+➣ uptime • runtime
+➣ sc • script
+➣ staff • colaboradores
+➣ serbot • serbot code
+➣ bots • sockets
+➣ status • estado
+➣ links • grupos
+➣ infobot
+➣ sug • newcommand
+➣ p • ping
+➣ reporte • reportar
+➣ sistema • system
+➣ speed • speedtest
+➣ views • usuarios
+➣ funciones • totalfunciones
+➣ ds • fixmsgespera
+➣ editautoresponder
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Comandos 〕━━━╮
-┃➣ help
-┃➣ uptime
-┃➣ sc
-┃➣ staff
-┃➣ serbot
-┃➣ bots
-┃➣ status
-┃➣ links
-┃➣ infobot
-┃➣ sug
-┃➣ p
-┃➣ reporte
-┃➣ sistema
-┃➣ speed
-┃➣ views
-┃➣ funciones
-┃➣ ds
-┃➣ editautoresponder
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Buscadores 』 〕━━━╮
+➣ tiktoksearch • tiktoks
+➣ tweetposts
+➣ ytsearch • yts
+➣ githubsearch
+➣ cuevana • cuevanasearch
+➣ google
+➣ pin • pinterest
+➣ imagen • image
+➣ infoanime
+➣ hentaisearch • searchhentai
+➣ xnxxsearch • xnxxs
+➣ xvsearch • xvideossearch
+➣ pornhubsearch • phsearch
+➣ npmjs
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Buscadores 〕━━━╮
-┃➣ tiktoksearch
-┃➣ tweetposts
-┃➣ ytsearch
-┃➣ githubsearch
-┃➣ cuevana
-┃➣ google
-┃➣ pin
-┃➣ imagen
-┃➣ infoanime
-┃➣ hentaisearch
-┃➣ xnxxsearch
-┃➣ xvsearch
-┃➣ pornhubsearch
-┃➣ npmjs
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Descargas 』 〕━━━╮
+➣ tiktok • tt
+➣ mediafire • mf
+➣ pinvid • pinvideo
+➣ mega • mg
+➣ play • play2
+➣ ytmp3 • ytmp4
+➣ fb • facebook
+➣ twitter • x
+➣ ig • instagram
+➣ tts • tiktoks
+➣ terabox • tb
+➣ ttimg • ttmp3
+➣ gitclone
+➣ xvideosdl
+➣ xnxxdl
+➣ apk • modapk
+➣ tiktokrandom • ttrandom
+➣ npmdl • npmdownloader
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Descargas 〕━━━╮
-┃➣ tiktok
-┃➣ mediafire
-┃➣ pinvid
-┃➣ mega
-┃➣ play
-┃➣ ytmp3
-┃➣ fb
-┃➣ twitter
-┃➣ ig
-┃➣ tts
-┃➣ terabox
-┃➣ ttimg
-┃➣ gitclone
-┃➣ xvideosdl
-┃➣ xnxxdl
-┃➣ apk
-┃➣ tiktokrandom
-┃➣ npmdl
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Economía 』 〕━━━╮
+➣ w • work • trabajar
+➣ slut • protituirse
+➣ cf • suerte
+➣ crime • crimen
+➣ ruleta • roulette • rt
+➣ casino • apostar
+➣ slot
+➣ cartera • wallet
+➣ banco • bank
+➣ deposit • depositar • d
+➣ with • retirar • withdraw
+➣ transfer • pay
+➣ miming • minar • mine
+➣ buyall • buy
+➣ daily • diario
+➣ cofre
+➣ weekly • semanal
+➣ monthly • mensual
+➣ steal • robar • rob
+➣ robarxp • robxp
+➣ eboard • baltop
+➣ aventura • adventure
+➣ curar • heal
+➣ cazar • hunt • berburu
+➣ inv • inventario
+➣ mazmorra • explorar
+➣ halloween
+➣ christmas • navidad
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Economia 〕━━━╮
-┃➣ w
-┃➣ slut
-┃➣ cf
-┃➣ crime
-┃➣ ruleta
-┃➣ casino
-┃➣ slot
-┃➣ cartera
-┃➣ banco
-┃➣ deposit
-┃➣ with
-┃➣ transfer
-┃➣ miming
-┃➣ buyall
-┃➣ daily
-┃➣ cofre
-┃➣ weekly
-┃➣ monthly
-┃➣ steal
-┃➣ robarxp
-┃➣ eboard
-┃➣ aventura
-┃➣ curar
-┃➣ cazar
-┃➣ inv
-┃➣ mazmorra
-┃➣ halloween
-┃➣ christmas
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Gacha 』 〕━━━╮
+➣ rollwaifu • rw • roll
+➣ claim • c • reclamar
+➣ harem • waifus • claims
+➣ charimage • waifuimage • wimage
+➣ charinfo • winfo • waifuinfo
+➣ givechar • givewaifu • regalar
+➣ vote • votar
+➣ waifusboard • waifustop • topwaifus
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Gacha 〕━━━╮
-┃➣ rollwaifu
-┃➣ claim
-┃➣ harem
-┃➣ charimage
-┃➣ charinfo
-┃➣ givechar
-┃➣ vote
-┃➣ waifusboard
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Stickers 』 〕━━━╮
+➣ sticker • s
+➣ setmeta
+➣ delmeta
+➣ pfp • getpic
+➣ qc
+➣ toimg • img
+➣ brat • ttp • attp
+➣ emojimix
+➣ wm
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Stickers 〕━━━╮
-┃➣ sticker
-┃➣ setmeta
-┃➣ delmeta
-┃➣ pfp
-┃➣ qc
-┃➣ toimg
-┃➣ brat
-┃➣ emojimix
-┃➣ wm
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Herramientas 』 〕━━━╮
+➣ calcular • cal
+➣ tiempo • clima
+➣ horario
+➣ fake • fakereply
+➣ enhance • remini • hd
+➣ letra
+➣ read • readviewonce • ver
+➣ whatmusic • shazam
+➣ ss • ssweb
+➣ length • tamaño
+➣ say • decir
+➣ todoc • todocument
+➣ translate • traducir • trad
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Herramientas 〕━━━╮
-┃➣ calcular
-┃➣ tiempo
-┃➣ horario
-┃➣ fake
-┃➣ enhance
-┃➣ letra
-┃➣ read
-┃➣ whatmusic
-┃➣ ss
-┃➣ length
-┃➣ say
-┃➣ todoc
-┃➣ translate
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Perfil 』 〕━━━╮
+➣ reg • verificar • register
+➣ unreg
+➣ profile
+➣ marry • [mencion]
+➣ divorce
+➣ setgenre • setgenero
+➣ delgenre • delgenero
+➣ setbirth • setnacimiento
+➣ delbirth • delnacimiento
+➣ setdescription • setdesc
+➣ deldescription • deldesc
+➣ lb • lboard • <pagina>
+➣ level • lvl • <@mencion>
+➣ comprarpremium • premium
+➣ confesiones • confesar
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Perfil 〕━━━╮
-┃➣ reg
-┃➣ unreg
-┃➣ profile
-┃➣ marry
-┃➣ divorce
-┃➣ setgenre
-┃➣ delgenre
-┃➣ setbirth
-┃➣ delbirth
-┃➣ setdescription
-┃➣ deldescription
-┃➣ lb
-┃➣ level
-┃➣ comprarpremium
-┃➣ confesiones
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Grupos 』 〕━━━╮
+➣ hidetag
+➣ gp • infogrupo
+➣ linea • listonline
+➣ setwelcome
+➣ setbye
+➣ link
+➣ admins • admin
+➣ restablecer • revoke
+➣ grupo • group [open/abrir]
+➣ grupo • gruop [close/cerrar]
+➣ kick • [numero/mencion]
+➣ add • añadir • agregar • [numero]
+➣ promote • [mencion]
+➣ demote • [mencion]
+➣ gpbanner • groupimg
+➣ gpname • groupname
+➣ gpdesc • groupdesc
+➣ advertir • warn • warning
+➣ unwarn • delwarn
+➣ advlist • listadv
+➣ bot on
+➣ bot off
+➣ mute • [mencion]
+➣ unmute • [mencion]
+➣ encuesta • poll
+➣ delete • del
+➣ fantasmas
+➣ kickfantasmas
+➣ invocar • tagall • todos
+➣ setemoji • setemo
+➣ listnum • kicknum
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Grupos 〕━━━╮
-┃➣ hidetag
-┃➣ gp
-┃➣ linea
-┃➣ setwelcome
-┃➣ setbye
-┃➣ link
-┃➣ admins
-┃➣ restablecer
-┃➣ grupo open
-┃➣ grupo close
-┃➣ kick
-┃➣ add
-┃➣ promote
-┃➣ demote
-┃➣ gpbanner
-┃➣ gpname
-┃➣ gpdesc
-┃➣ advertir
-┃➣ unwarn
-┃➣ advlist
-┃➣ bot on
-┃➣ bot off
-┃➣ mute
-┃➣ unmute
-┃➣ encuesta
-┃➣ delete
-┃➣ fantasmas
-┃➣ kickfantasmas
-┃➣ invocar
-┃➣ setemoji
-┃➣ listnum
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Anime 』 〕━━━╮
+➣ angry • enojado • [mencion]
+➣ bite • [mencion]
+➣ bleh • [mencion]
+➣ blush • [mencion]
+➣ bored • aburrido • [mencion]
+➣ cry • [mencion]
+➣ cuddle • [mencion]
+➣ dance • [mencion]
+➣ drunk • [mencion]
+➣ eat • comer • [mencion]
+➣ facepalm • [mencion]
+➣ happy • feliz • [mencion]
+➣ hug • [mencion]
+➣ impregnate • preg • [mencion]
+➣ kill • [mencion]
+➣ kiss • besar • kiss2 • [mencion]
+➣ laugh • [mencion]
+➣ lick • [mencion]
+➣ love • amor • [mencion]
+➣ pat • [mencion]
+➣ poke • [mencion]
+➣ pout • [mencion]
+➣ punch • [mencion]
+➣ run • [mencion]
+➣ sad • triste • [mencion]
+➣ scared • [mencion]
+➣ seduce • [mencion]
+➣ shy • timido • [mencion]
+➣ slap • [mencion]
+➣ dias • days
+➣ noches • nights
+➣ sleep • [mencion]
+➣ smoke • [mencion]
+➣ think • [mencion]
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 Anime 〕━━━╮
-┃➣ angry
-┃➣ bite
-┃➣ bleh
-┃➣ blush
-┃➣ bored
-┃➣ cry
-┃➣ cuddle
-┃➣ dance
-┃➣ drunk
-┃➣ eat
-┃➣ facepalm
-┃➣ happy
-┃➣ hug
-┃➣ impregnate
-┃➣ kill
-┃➣ kiss
-┃➣ laugh
-┃➣ lick
-┃➣ love
-┃➣ pat
-┃➣ poke
-┃➣ pout
-┃➣ punch
-┃➣ run
-┃➣ sad
-┃➣ scared
-┃➣ seduce
-┃➣ shy
-┃➣ slap
-┃➣ dias
-┃➣ noches
-┃➣ sleep
-┃➣ smoke
-┃➣ think
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 NSFW 』 〕━━━╮
+➣ anal • [mencion]
+➣ waifu
+➣ bath • [mencion]
+➣ blowjob • mamada • bj • [mencion]
+➣ boobjob • [mencion]
+➣ cum • [mencion]
+➣ fap • [mencion]
+➣ ppcouple • ppcp
+➣ footjob • [mencion]
+➣ fuck • coger • fuck2 • [mencion]
+➣ cafe • coffe
+➣ violar • perra • [mencion]
+➣ grabboobs • [mencion]
+➣ grop • [mencion]
+➣ lickpussy • [mencion]
+➣ rule34 • r34 • [tags]
+➣ sixnine • 69 • [mencion]
+➣ spank • nalgada • [mencion]
+➣ suckboobs • [mencion]
+➣ undress • encuerar • [mencion]
+➣ yuri • tijeras • [mencion]
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-╭━━━〔 NSFW 〕━━━╮
-┃➣ anal
-┃➣ waifu
-┃➣ bath
-┃➣ blowjob
-┃➣ boobjob
-┃➣ cum
-┃➣ fap
-┃➣ ppcouple
-┃➣ footjob
-┃➣ fuck
-┃➣ cafe
-┃➣ violar
-┃➣ grabboobs
-┃➣ grop
-┃➣ lickpussy
-┃➣ rule34
-┃➣ sixnine
-┃➣ spank
-┃➣ suckboobs
-┃➣ undress
-┃➣ yuri
-╰━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 『 Juegos 』 〕━━━╮
+➣ amistad • amigorandom
+➣ chaqueta • jalamela
+➣ chiste
+➣ consejo
+➣ doxeo • doxear • [mencion]
+➣ facto
+➣ formarpareja
+➣ formarpareja5
+➣ frase
+➣ huevo
+➣ chupalo • [mencion]
+➣ aplauso • [mencion]
+➣ marron • [mencion]
+➣ suicidar
+➣ iq • iqtest • [mencion]
+➣ meme
+➣ morse
+➣ nombreninja
+➣ paja • pajeame
+➣ personalidad • [mencion]
+➣ piropo
+➣ pregunta
+➣ ship • pareja
+➣ sorteo
+➣ top
+➣ formartrio • [mencion]
+➣ ahorcado
+➣ mates • matematicas
+➣ ppt
+➣ sopa • buscarpalabra
+➣ pvp • suit • [mencion]
+➣ ttt
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+`
 
-╭━━━〔 Juegos 〕━━━╮
-┃➣ amistad
-┃➣ chaqueta
-┃➣ chiste
-┃➣ consejo
-┃➣ doxeo
-┃➣ facto
-┃➣ formarpareja
-┃➣ formarpareja5
-┃➣ frase
-┃➣ huevo
-┃➣ chupalo
-┃➣ aplauso
-┃➣ marron
-┃➣ suicidar
-┃➣ iq
-┃➣ meme
-┃➣ morse
-┃➣ nombreninja
-┃➣ paja
-┃➣ personalidad
-┃➣ piropo
-┃➣ pregunta
-┃➣ ship
-┃➣ sorteo
-┃➣ top
-┃➣ formartrio
-┃➣ ahorcado
-┃➣ mates
-┃➣ ppt
-┃➣ sopa
-┃➣ pvp
-┃➣ ttt
-╰━━━━━━━━━━━━━━━━━━╯`.trim()
-await conn.sendMessage(m.chat, { 
-text: txt,
-contextInfo: {
-mentionedJid: [userId],
-externalAdReply: {                
-title: botname,
-body: textbot,
-mediaType: 1,
-mediaUrl: redes,
-sourceUrl: redes,
-thumbnail: await (await fetch(banner)).buffer(),
-showAdAttribution: false,
-containsAutoReply: true,
-renderLargerThumbnail: true
-}}}, { quoted: m })
+  await conn.sendMessage(m.chat, { 
+    text: txt,
+    contextInfo: {
+      mentionedJid: [userId],
+      externalAdReply: {                
+        title: botname,
+        body: textbot,
+        mediaType: 1,
+        mediaUrl: redes,
+        sourceUrl: redes,
+        thumbnail: await (await fetch(banner)).buffer(),
+        showAdAttribution: false,
+        containsAutoReply: true,
+        renderLargerThumbnail: true
+      }
+    }
+  }, { quoted: m })
 }
 
 handler.help = ['menu']
@@ -320,8 +312,8 @@ handler.command = ['menu', 'menú', 'help']
 export default handler
 
 function clockString(ms) {
-let seconds = Math.floor((ms / 1000) % 60)
-let minutes = Math.floor((ms / (1000 * 60)) % 60)
-let hours = Math.floor((ms / (1000 * 60 * 60)) % 24)
-return `${hours}h ${minutes}m ${seconds}s`
+  let seconds = Math.floor((ms / 1000) % 60)
+  let minutes = Math.floor((ms / (1000 * 60)) % 60)
+  let hours = Math.floor((ms / (1000 * 60 * 60)) % 24)
+  return `${hours}h ${minutes}m ${seconds}s`
 }
