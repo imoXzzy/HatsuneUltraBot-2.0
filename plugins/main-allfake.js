@@ -27,13 +27,13 @@ return res.data
 console.log(`Error : ${e}`)
 }}
   
-global.creador = 'wa.me/5212202410659'
+global.creador = 'wa.me/18493907272'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.namechannel = '=͟͟͞❀ 𝐘𝐮𝐤𝐢 𝐒𝐮𝐨𝐮 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ⏤͟͟͞͞★'
-global.namechannel2 = '=͟͟͞❀ 𝐘𝐮𝐤𝐢 𝐒𝐮𝐨𝐮 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ⏤͟͟͞͞★'
-global.namegrupo = 'ᰔᩚ ᥡᥙkі sᥙ᥆ᥙ • ᥆𝖿іᥴіᥲᥣ ❀'
-global.namecomu = 'ᰔᩚ ᥡᥙkіᑲ᥆𝗍-mძ • ᥴ᥆mᥙᥒі𝗍ᥡ ❀'
-global.listo = '❀ *Aquí tienes ฅ^•ﻌ•^ฅ*'
+global.namechannel = '𝐻𝐴𝑇𝑆𝑈𝑁𝐸-𝑈𝐿𝑇𝑅𝐴 𝐵𝑂𝑇 𝑋𝑍𝑌'
+global.namechannel2 = '𝑯𝑨𝑻𝑺𝑼𝑵𝑬-𝑼𝑳𝑻𝑹𝑨 𝑩𝑶𝑻 𝑿𝒁𝒀'
+global.namegrupo = '𝙃𝙖𝙩𝙨𝙪𝙣𝙚𝙐𝙡𝙩𝙧𝙖-𝘽𝙤𝙩 𝙊𝙛𝙞𝙘𝙞𝙖𝙡'
+global.namecomu = '𝗛𝗮𝘁𝘀𝘂𝗻𝗲𝗨𝗹𝘁𝗿𝗮-𝗠𝗗 𝗢𝗙𝗖'
+global.listo = ' *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
 
 global.canalIdM = ["120363341909397115@newsletter", "120363341909397115@newsletter"]
