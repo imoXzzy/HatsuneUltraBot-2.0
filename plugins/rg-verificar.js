@@ -9,7 +9,7 @@ let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   let mentionedJid = [who]
-  let pp = await conn.profilePictureUrl(who, 'image').catch((_) => 'https://files.catbox.moe/xr2m6u.jpg')
+  let pp = await conn.profilePictureUrl(who, 'image').catch((_) => 'https://cdn.russellxz.click/7938403b.jpeg')
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
   if (user.registered === true) return m.reply(`『✦』Ya estás registrado.\n\n*¿Quiere volver a registrarse?*\n\nUse este comando para eliminar su registro.\n*${usedPrefix}unreg*`)
@@ -29,24 +29,26 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   global.db.data.users[m.sender].exp += 300
   global.db.data.users[m.sender].joincount += 20
   let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 20)
-let regbot = `✦ 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗔 𝗗 𝗢 ✦\n`
-regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-regbot += `> ᰔᩚ Nombre » ${name}\n`
-regbot += `> ✎ Edad » ${age} años\n`
-regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-regbot += `❀ 𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:\n`
-regbot += `> • ⛁ *${moneda}* » 40\n`
-regbot += `> • ✰ *Experiencia* » 300\n`
-regbot += `> • ❖ *Tokens* » 20\n`
-regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-regbot += `> ${dev}`
+let regbot = `
+╭━━━〔 ✦ 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢 ✦ 〕━━━╮
+│ ✦ Nombre » ${name}
+│ ✦ Edad » ${age} años
+│
+│ ❀ 𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:
+│ ✦ ⛁ ${moneda} » 40
+│ ✦ ✰ Experiencia » 300
+│ ✦ ❖ Tokens » 20
+│
+│ ✦ ${dev}
+╰━━━━━━━━━━━━━━━━━━━━━━━╯
+`.trim();
 await m.react('📩')
 
 await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: '✧ Usuario Verificado ✧',
+                title: '𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐕𝐄𝐑𝐈𝐅𝐈𝐂𝐀𝐃𝐎',
                 body: textbot,
                 thumbnailUrl: pp,
                 sourceUrl: channel,
