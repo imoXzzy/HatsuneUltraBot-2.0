@@ -612,9 +612,9 @@ await conn.sendMessage(m.chat, {
   });
 }
 
-handler.help = ['menu']
+handler.help = ['menu2']
 handler.tags = ['main']
-handler.command = ['menu', 'menú', 'help']
+handler.command = ['menu2', 'menú2', 'help']
 
 export default handler
 
