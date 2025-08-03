@@ -31,7 +31,7 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = "* ↫ Hatsune  -  Ultra  -  Bot ↬ *\n\n✐ Cσɳҽxισɳ SυႦ-Bσƚ Mσԃҽ QR\n\n✰ Con otro celular o en la PC escanea este QR para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` » Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` » Toque dispositivos vinculados\n\n\`3\` » Escanee este codigo QR para iniciar sesion con el bot\n\n✧ ¡Este código QR expira en 45 segundos!."
-let rtx2 = "𝐇𝐀𝐓𝐒𝐔𝐍𝐄-𝐕𝐈𝐍𝐂𝐔𝐋𝐀𝐂𝐈𝐎𝐍\n\n 𝗖𝗢𝗗𝗜𝗚𝗢 𝗣𝗔𝗥𝗔 𝗛𝗔𝗖𝗘𝗥𝗖𝗘 𝗦𝗨𝗕-𝗕𝗢𝗧\n\n 𝑆𝑖𝑔𝑢𝑒 𝑒𝑠𝑡𝑜𝑠 𝑝𝑎𝑠𝑜𝑠 𝑝𝑎𝑟𝑎 𝑢𝑛𝑖𝑟𝑡𝑒 𝑐𝑜𝑚𝑜 𝑆𝑢𝑏-𝐵𝑜𝑡.\n\n\`✦\` Haga clic en los tres puntos en la esquina superior derecha\n\n\`✦\` ➪ Toque *Dispositivos Vinculados*\n\n\`✦\` ➪ Seleccione *Vincular con el número de teléfono*\n\n\`✦\` ➪ Escriba el *Código* para iniciar sesión con el bot."
+let rtx2 = "𝐇𝐀𝐓𝐒𝐔𝐍𝐄-𝐁𝐎𝐓\n\n 𝗖𝗢𝗗𝗜𝗚𝗢 𝗣𝗔𝗥𝗔 𝗦𝗨𝗕-𝗕𝗢𝗧\n\n 𝑆𝑖𝑔𝑢𝑒 𝑒𝑠𝑡𝑜𝑠 𝑝𝑎𝑠𝑜𝑠 𝑝𝑎𝑟𝑎 𝑢𝑛𝑖𝑟𝑡𝑒 𝑐𝑜𝑚𝑜 𝑆𝑢𝑏-𝐵𝑜𝑡.\n\n\`✦\` Haga clic en los tres puntos en la esquina superior derecha\n\n\`✦\` ➪ Toque *Dispositivos Vinculados*\n\n\`✦\` ➪ Seleccione *Vincular con el número de teléfono*\n\n\`✦\` ➪ Escriba el *Código* para iniciar sesión con el bot."
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
