@@ -7,17 +7,17 @@ let uptime = clockString(_uptime)
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-let txt = `Hola! Soy *${botname}* (｡•̀ᴗ-)✧
+let txt = `𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ฅ^•ﻌ•^ฅ
 Aquí tienes la lista de comandos
 ╭┈─────────────────
-│✎ Cliente ✏ @${userId.split('@')[0]}
-│✎ Modo ✏ Publico
+│✎ Cliente ➪ @${userId.split('@')[0]}
+│✎ Modo ➪ Publico
 │✎ Soy *${botname}*, tu bot virtual.
-│✎ Bot ✏ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│✎ Activada ✏ ${uptime}
-│✎ Usuarios ✏ ${totalreg}
-│✎ Comandos ✏ ${totalCommands}
-│✎ Baileys ✏ Multi Device
+│✎ Bot ➪ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+│✎ Activada ➪ ${uptime}
+│✎ Usuarios ➪ ${totalreg}
+│✎ Comandos ➪ ${totalCommands}
+│✎ Baileys ➪ Multi Device
 ╰─────────────────
 Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
