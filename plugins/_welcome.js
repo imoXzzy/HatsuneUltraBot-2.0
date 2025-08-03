@@ -55,10 +55,11 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (typeof chat.welcome === 'undefined') chat.welcome = true;
 
   // Textos de bienvenida/despedida
-  let txtWelcome = 'ゲ◜៹ New Member ៹◞ゲ';
-  let txtGoodbye = 'ゲ◜៹ Bye Member ៹◞ゲ';
-  let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}\n✰ ${mention}\n${global.welcom1 || ''}\n✦ Ahora somos ${memberCount} Miembros.\n•(=^●ω●^=)• Disfruta tu estadía en el grupo!\n> ✐ Usa *#help* para ver comandos.`;
-  let bye = `❀ *Adiós* de ${groupMetadata.subject}\n✰ ${mention}\n${global.welcom2 || ''}\n✦ Ahora somos ${memberCount} Miembros.\n•(=^●ω●^=)• ¡Te esperamos pronto!`;
+  let txtWelcome = '🌟 New Member 🌟';
+  let txtGoodbye = '🌙 Bye Member 🌙';
+  let bienvenida = `🌟 *Bienvenido* a ${groupMetadata.subject}\n✰ ${mention}\n${global.welcom1 || ''}\n📊 Ahora somos ${memberCount} Miembros. Disfruta tu estadía en el grupo!\n> ✐ mas info
+https://xzysitweb.vercel.app`;
+  let bye = `🌙 *Adiós* de ${groupMetadata.subject}\n✨ ${mention}\n${global.welcom2 || ''}\n📊 Ahora somos ${memberCount} Miembros.\n> más info https://xzysitweb.vercel.app`;
 
   // Las variables "dev", "redes", "fkontak" deben estar bien definidas
   let dev = global.dev || '';
