@@ -10,13 +10,14 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 let txt = `Hola! Soy *${botname}* (｡•̀ᴗ-)✧
 Aquí tienes la lista de comandos
 ╭┈─────────────────
-│ᰔᩚ Cliente » @${userId.split('@')[0]}
-│❀ Modo » Publico
-│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│ⴵ Activada » ${uptime}
-│✰ Usuarios » ${totalreg}
-│✧ Comandos » ${totalCommands}
-│🜸 Baileys » Multi Device
+│✎ Cliente ✏ @${userId.split('@')[0]}
+│✎ Modo ✏ Publico
+│✎ Soy *${botname}*, tu bot virtual.
+│✎ Bot ✏ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+│✎ Activada ✏ ${uptime}
+│✎ Usuarios ✏ ${totalreg}
+│✎ Comandos ✏ ${totalCommands}
+│✎ Baileys ✏ Multi Device
 ╰─────────────────
 Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
