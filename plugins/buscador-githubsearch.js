@@ -32,5 +32,5 @@ m.react('✖️');
 };
 
 handler.command = ['githubsearch', 'gbsearch'];
-
+handler.tags = [ 'downloader' ]
 export default handler;
