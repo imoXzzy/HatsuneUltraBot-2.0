@@ -2,7 +2,7 @@ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn }) => {
   const suittag = '18493907272' // Número sin "+" ni "@s.whatsapp.net"
-  const botname = 'HatsuneUltraBot'
+  const botname = 'Creador De Hatsunebot'
   const correo = 'erenxz01@gmail.com'
   const md = 'https://github.com/erenxzy/Rukia-Botv2'
   const channel = 'https://whatsapp.com/channel/XXXX'
