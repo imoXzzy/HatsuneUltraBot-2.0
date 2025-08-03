@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
   let totalreg = Object.keys(global.db.data.users).length
   let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-  // 🎨 20 Decoraciones
+  // 20 Decoraciones
   let decoraciones = [
     "🌸💙🎤", "💙🎶🌟", "🌌🎶💎", "🎤💙🌸", "🎶🌟💙",
     "🌺💚🎤", "🌈🎶🌸", "💙💎🎶", "🎵🌸💙", "🌟🎤💙",
@@ -15,7 +15,7 @@ let handler = async (m, { conn, args }) => {
     "🎶🌌🌸", "💚💎🎶", "🌈💙🎤", "💙🌸🎵", "🎤🌟💎"
   ]
 
-  // 🖼 20 pares de bordes
+  // 20 pares de bordes
   let bordes = [
     { top: "╭━━━✦❘༻🌸༺❘✦━━━╮", bottom: "╰━━━✦❘༻🌸༺❘✦━━━╯" },
     { top: "╔═══*.·:·.☽✧☾.·:·.*═══╗", bottom: "╚═══*.·:·.☽✧☾.·:·.*═══╝" },
@@ -39,7 +39,7 @@ let handler = async (m, { conn, args }) => {
     { top: "╭❍━━━━━━━❍╮", bottom: "╰❍━━━━━━━❍╯" }
   ]
 
-  // 🔹 20 iconos para comandos
+  // 20 iconos para comandos
   let iconosCmd = [
     "ᰔᩚ", "✦", "❍", "➤", "★", "✧", "✪", "➺", "✿", "➳",
     "🌸", "💙", "🎤", "🎶", "💎", "🌟", "🌺", "🎵", "🌈", "💚"
@@ -505,7 +505,7 @@ ${icono} *#cafe • #coffe*
 ${icono} *#violar • #perra* + <mencion>
 > ✦ Viola a alguien
 ${icono} *#grabboobs* + <mencion>
-> ✦ Agarrrar tetas
+> ✦ Agarrar tetas
 ${icono} *#grop* + <mencion>
 > ✦ Manosear a alguien
 ${icono} *#lickpussy* + <mencion>
@@ -592,11 +592,6 @@ ${icono} *#ttt*
 > ✦ Crea una sala de juego.
 
 ${bordeSel.bottom}
-${icono} *#pvp • #suit* + <mencion>
-> ✦ Juega un pvp contra otro usuario.
-${icono} *#ttt*
-> ✦ Crea una sala de juego.
-${bordeSel.bottom}
 `.trim()
 
 await conn.sendMessage(m.chat, {
@@ -617,9 +612,9 @@ await conn.sendMessage(m.chat, {
   });
 }
 
-handler.help = ['menu2']
+handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu2', 'menú2', 'help2']
+handler.command = ['menu', 'menú', 'help']
 
 export default handler
 
