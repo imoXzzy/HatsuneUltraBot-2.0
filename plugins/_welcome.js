@@ -29,6 +29,7 @@ ${global.welcom1}
   
   if (chat.welcome && (m.messageStubType == 28 || m.messageStubType == 32)) {
     if (chat.welcome && m.messageStubType == 28) {
+    if (chat.welcome && m.messageStubType == 28) {
     let bye = `🌙 *Adiós* de ${groupMetadata.subject}
 > ✦ @${m.messageStubParameters[0].split`@`[0]}
 ${global.welcom2}
