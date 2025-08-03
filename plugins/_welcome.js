@@ -17,10 +17,10 @@ export async function before(m, { conn, participants, groupMetadata }) {
   }
 
   if (chat.welcome && m.messageStubType == 27) {
-    let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}
- @${m.messageStubParameters[0].split`@`[0]}
+    let bienvenida = `🌟 *Bienvenido* a ${groupMetadata.subject}
+> @${m.messageStubParameters[0].split`@`[0]}
 ${global.welcom1}
-✦ Ahora somos ${groupSize} Miembros.
+> ✦ Ahora somos ${groupSize} Miembros.
 > Disfruta tu estadía en el grupo!
 > ✐ Más info aquí: 🌐 https://erenxsit.vercel.app`
     
