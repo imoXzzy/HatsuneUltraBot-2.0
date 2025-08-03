@@ -61,7 +61,8 @@ global.etiqueta = 'ˣᶻʸ'
 global.moneda = '¥enes'
 global.welcom1 = '➪ 𝘌𝘥𝘪𝘵𝘢 𝘊𝘰𝘯 𝘌𝘭 𝘊𝘰𝘮𝘢𝘯𝘥𝘰 𝘚𝘦𝘵𝘸𝘦𝘭𝘤𝘰𝘮𝘦'
 global.welcom2 = '➪ 𝘌𝘥𝘪𝘵𝘢 𝘊𝘰𝘯 𝘌𝘭 𝘊𝘰𝘮𝘢𝘯𝘥𝘰 𝘚𝘦𝘵𝘣𝘺𝘦'
-global.avatar = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1742678797993.jpeg'
+global.banner = 'https://cdn.russellxz.click/dfff3cd2.jpeg'
+global.avatar = 'https://cdn.russellxz.click/f3264545.jpeg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
