@@ -8,7 +8,6 @@ let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
 let txt = `𝑯𝑨𝑻𝑺𝑼𝑵𝑬 𝑴𝑬𝑵𝑼 𝑼𝑳𝑻𝑹𝑨 ฅ^•ﻌ•^ฅ
-Aquí tienes la lista de comandos
 ╭┈─────────────────
 │✎ Cliente ➪ @${userId.split('@')[0]}
 │✎ Modo ➪ Publico
@@ -19,7 +18,6 @@ Aquí tienes la lista de comandos
 │✎ Comandos ➪ ${totalCommands}
 │✎ Baileys ➪ Multi Device
 ╰─────────────────
-Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
