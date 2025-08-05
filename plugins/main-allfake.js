@@ -33,8 +33,8 @@ global.namechannel = '𝐻𝐴𝑇𝑆𝑈𝑁𝐸-𝑈𝐿𝑇𝑅𝐴 𝐵𝑂
 global.namechannel2 = '𝑯𝑨𝑻𝑺𝑼𝑵𝑬-𝑼𝑳𝑻𝑹𝑨 𝑩𝑶𝑻 𝑿𝒁𝒀'
 global.namegrupo = '𝙃𝙖𝙩𝙨𝙪𝙣𝙚𝙐𝙡𝙩𝙧𝙖-𝘽𝙤𝙩 𝙊𝙛𝙞𝙘𝙞𝙖𝙡'
 global.namecomu = '𝗛𝗮𝘁𝘀𝘂𝗻𝗲𝗨𝗹𝘁𝗿𝗮-𝗠𝗗 𝗢𝗙𝗖'
-global.listo = ' *Aquí tienes ฅ^•ﻌ•^ฅ*'
-global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+global.listo = ' *Listo bbe*'
+global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://cdn.russellxz.click/f516cb99.jpeg')
 
 global.canalIdM = ["120363341909397115@newsletter", "120363341909397115@newsletter"]
 global.canalNombreM = ["❁ 𝐇𝐚𝐭𝐬𝐮𝐧𝐞 𝐔𝐥𝐭𝐫𝐚𝐁𝐨𝐭 𝐔𝐩𝐝𝐚𝐭𝐞 ❁", "❀𝑯𝒂𝒕𝒔𝒖𝒏𝒆 𝑼𝒍𝒕𝒓𝒂𝑩𝒐𝒕❀"]
