@@ -61,11 +61,11 @@ let handler = async (m, { conn }) => {
             ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
             : 'Libre'
 
-        const message = `❀ Nombre » *${randomCharacter.name}*
-⚥ Género » *${randomCharacter.gender}*
-✰ Valor » *${randomCharacter.value}*
-♡ Estado » ${statusMessage}
-❖ Fuente » *${randomCharacter.source}*
+        const message = `❒ Nombre » *${randomCharacter.name}*
+✦ Género ➪ *${randomCharacter.gender}*
+✦ Valor ➪ *${randomCharacter.value}*
+✦ Estado ➪ ${statusMessage}
+✦ Fuente ➪ *${randomCharacter.source}*
 ✦ ID: *${randomCharacter.id}*`
 
         const mentions = userEntry ? [userEntry.userId] : []
