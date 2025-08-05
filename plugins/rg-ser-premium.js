@@ -49,12 +49,12 @@ ${command} 1 d ---> 1 día premium.`
   }
   let cap = `  \`\`\`乂 B U Y  -  P R E M I U M 乂\`\`\`
 
-ᰔᩚ Usuario » @${m.sender.split`@`[0]}
-ⴵ Tiempo Premium » ${args[0]} ${type}
-✦ Total a pagar » ${precio * args[0] + comision * args[0]} ${moneda}
-⛁ ${moneda} » ${users.coin}
-✰ Tenía » ${users.coin + precio * args[0] + comision * args[0]}
-✧ Comisión » -${comision * args[0]} (incluida)`
+❑ Usuario » @${m.sender.split`@`[0]}
+⏳ Tiempo Premium » ${args[0]} ${type}
+💰 Total a pagar » ${precio * args[0] + comision * args[0]} ${moneda}
+🪙 ${moneda} » ${users.coin}
+🏪 Tenía » ${users.coin + precio * args[0] + comision * args[0]}
+📄 Comisión » -${comision * args[0]} (incluida)`
   conn.sendMessage(m.chat, { text: cap, mentions: [m.sender] }, { quoted: fkontak })
 }
 
