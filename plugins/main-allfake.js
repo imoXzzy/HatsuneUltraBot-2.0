@@ -65,7 +65,7 @@ global.waitt = '❍ Espera un momento, soy lenta...';
 global.waittt = '❍ Espera un momento, soy lenta...';
 global.waitttt = '❍ Espera un momento, soy lenta...';
 
-var canal = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'  
+var canal = 'https://whatsapp.com/channel/0029VauhV0E0QeafF9ikAB1G'  
 var comunidad = 'https://chat.whatsapp.com/KT1uL01TeY7FJachOJtC83?mode=ac_t'
 var git = 'https://github.com/erenxzy'
 var github = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot' 
