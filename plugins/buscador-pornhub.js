@@ -15,12 +15,13 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
   try {
     let searchResults = await searchPornhub(args[0]);
     let teks = searchResults.result.map((v, i) => 
-      `「 *P O R N H U B  - S E A R C H* 」
-🎞️ *Título:* ${v.title}
-🕒 *Duración:* ${v.duration}
-👀 *Vistas:* ${v.views}
-🔗 *Link:* ${v.url}
----------------------------------------------------\n`).join('\n\n');
+      `╭━━━〔 🔎 P O R N H U B - S E A R C H 〕━━━╮
+│✦ 🎞️ *Título:* ${v.title}
+│✦ 🕒 *Duración:* ${v.duration}
+│✦ 👀 *Vistas:* ${v.views}
+│✦ 🔗 *Link:* ${v.url}
+╰━━━━━━━━━━━━━━━━━━━━╯
+---------------------------------------------------\n`
 
     if (searchResults.result.length === 0) {
       teks = `${emoji2} No se encontraron resultados...`;
