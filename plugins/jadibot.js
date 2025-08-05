@@ -78,5 +78,6 @@ break
 handler.tags = ['serbot']
 handler.help = ['sockets', 'deletesesion', 'pausarai']
 handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesession', 'stop', 'pausarai', 'pausarbot', 'bots', 'sockets', 'socket']
+handler.rowner = true;
 
 export default handler
