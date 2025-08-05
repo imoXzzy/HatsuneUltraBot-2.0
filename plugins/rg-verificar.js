@@ -34,15 +34,15 @@ let regbot = `
 │ ✦ Nombre » ${name}
 │ ✦ Edad » ${age} años
 │
-│ ❀ 𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:
-│ ✦ ⛁ ${moneda} » 40
-│ ✦ ✰ Experiencia » 300
-│ ✦ ❖ Tokens » 20
+│ 🎁 𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:
+│ ✦ 🪙 ${moneda} » 40
+│ ✦ ⭐ Experiencia » 300
+│ ✦ 🧧 Tokens » 20
 │
 │ ✦ ${dev}
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
-await m.react('📩')
+await m.react('✅')
 
 await conn.sendMessage(m.chat, {
         text: regbot,
