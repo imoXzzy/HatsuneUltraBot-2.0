@@ -68,7 +68,7 @@ global.waitttt = '❍ Espera un momento, soy lenta...';
 var canal = 'https://whatsapp.com/channel/0029VauhV0E0QeafF9ikAB1G'  
 var comunidad = 'https://chat.whatsapp.com/KT1uL01TeY7FJachOJtC83?mode=ac_t'
 var git = 'https://github.com/erenxzy'
-var github = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot' 
+var github = 'https://github.com/erenxzy/Hatsune-UltraBot' 
 let correo = 'erenxz01@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
