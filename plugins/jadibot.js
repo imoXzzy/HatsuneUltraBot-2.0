@@ -73,8 +73,7 @@ const message = users.map((v, index) =>
 ✦ 🌸 Usuario: ${v.user.name || 'Sub-Bot'}
 ✦ ⏳ Online: ${ v.uptime 
       ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) 
-      : 'Desconocido'}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯`
+      : 'Desconocido'}`
 ).join('\n\n💙🎶 __________________________ 🎶💙\n\n');
 const replyMessage = message.length === 0 
   ? `💙🎤 Ningún *Sub-Bot* conectado... ¡Miku dice que tengas paciencia, pronto volverán! 🌸` 
