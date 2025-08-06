@@ -67,7 +67,7 @@ resultado += segundos + " segundos";
 }
 return resultado;
 }
-const message = users.map((v, index) => 
+let blocks = users.map((v, index) => 
 `╭━━━〔 💙 SUB-BOT ULTRA ${index + 1} 💙 〕━━━╮
 ✦ 🔔 Link: Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado
 ✦ 🌸 Usuario: ${v.user.name || 'Sub-Bot'}
@@ -75,7 +75,10 @@ const message = users.map((v, index) =>
       ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) 
       : 'Desconocido'}
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯`
-).join('\n\n'); // <-- salto de línea doble
+);
+
+// Unir bloques con doble salto de línea
+const message = blocks.join('\n\n');
 const replyMessage = message.length === 0 
   ? `💙🎤 Ningún *Sub-Bot* conectado... ¡Miku dice que tengas paciencia, pronto volverán! 🌸` 
   : message;
