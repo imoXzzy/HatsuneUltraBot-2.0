@@ -77,11 +77,3 @@ npm start
 ```
 
 ---
-
-## 🌸 Nota Final  
-
-💙 HatsuneUltraBot marcará el cierre de mis proyectos públicos. A partir de ahora, todos mis nuevos desarrollos estarán disponibles únicamente en los **grupos oficiales**, donde seguiré compartiendo innovación, estilo y experiencias únicas.  
-
-Gracias a todos los que han apoyado hasta aquí 🎶
-
-> by erenxszy 2025 proyect HatsuneUltra 🌟
