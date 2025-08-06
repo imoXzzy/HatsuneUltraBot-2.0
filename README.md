@@ -85,3 +85,6 @@ A partir de ahora, **todos mis nuevos desarrollos estarán disponibles únicamen
 donde seguiré compartiendo innovación, estilo y experiencias únicas.  
 
 Gracias a todos los que han apoyado hasta aquí 🎶🌸.
+
+
+> by erenxszy 2025 proyect HatsuneUltra 🌟
