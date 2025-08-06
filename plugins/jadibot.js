@@ -69,9 +69,9 @@ return resultado;
 }
 const message = users.map((v, index) => 
 `╭━━━〔 💙 SUB-BOT ULTRA ${index + 1} 💙 〕━━━╮
-✦ 🔔 Link: Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado
-✦ 🌸 Usuario: ${v.user.name || 'Sub-Bot'}
-✦ ⏳ Online: ${ v.uptime 
+✦ 📱 Link: Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado
+✦ 🌟 Usuario: ${v.user.name || 'Sub-Bot'}
+✦ 🕐 Online: ${ v.uptime 
       ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) 
       : 'Desconocido'}`
 ).join('\n\n💙🎶 __________________________ 🎶💙\n\n');
