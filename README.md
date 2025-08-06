@@ -83,8 +83,8 @@ npm start
 href="https://github.com/erenxzy"><img src="https://github.com/erenxzy.png" width="130" height="130" alt="
 𝙀𝙧𝙚𝙣𝙭𝙯𝙮𝙈𝘿𝙁"/></a>
 
-### **`⚒︎ 𝘾𝙊𝙇𝙊𝘽𝙊𝙍𝘼𝘿𝙊𝙍𝙀𝙎 `**
+### **`🌟 𝘾𝙊𝙇𝙊𝘽𝙊𝙍𝘼𝘿𝙊𝙍𝙀𝙎 `**
 <div style="display: flex; gap: 10px;">
   <a href="https://github.com/Elder504" style="text-decoration: none;">
-    <img src="https://github.com/Elder504.png" width="130" height="130" alt="Elder504" style="border-radius: 50%;" />
+    <img src="https://github.com/Andresv27728.png" width="130" height="130" alt="Elder504" style="border-radius: 50%;" />
   </a>
