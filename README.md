@@ -6,7 +6,6 @@
   <img src="https://cdn.russellxz.click/d6544fc9.jpeg" alt="HatsuneUltraBot" width="600" />
 </p>
 
-# 🎶 HatsuneUltraBot 💙
 
 > Un bot creado para transformar tus grupos de WhatsApp en un espacio dinámico, divertido y lleno de estilo kawaii 🌸.  
 > Con funciones modernas, estética única y comandos diseñados para sorprender a cada usuario.  
