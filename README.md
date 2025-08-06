@@ -88,3 +88,11 @@ href="https://github.com/erenxzy"><img src="https://github.com/erenxzy.png" widt
   <a href="https://github.com/Elder504" style="text-decoration: none;">
     <img src="https://github.com/Andresv27728.png" width="130" height="130" alt="Elder504" style="border-radius: 50%;" />
   </a>
+
+## 🌸 Nota Final  
+
+💙 HatsuneUltraBot marcará el cierre de mis proyectos públicos. A partir de ahora, todos mis nuevos desarrollos estarán disponibles únicamente en los **grupos oficiales**, donde seguiré compartiendo innovación, estilo y experiencias únicas.  
+
+Gracias a todos los que han apoyado hasta aquí 🎶
+
+> by erenxszy 2025 proyect HatsuneUltra 🌟
