@@ -40,4 +40,40 @@ Perfecto para quienes buscan un grupo más interactivo, estético y lleno de ene
 
 ---
 
-> 💙 *HatsuneUltraBot: un universo kawaii para que tu grupo sea más divertido, seguro y original.* 🎶🌸
+## 🔄 Instalación (Requisitos)
+
+- ✅ [Node.js](https://nodejs.org/) (v16 o superior)
+- ✅ [Termux](https://f-droid.org/packages/com.termux/) (si usas Android)
+- ✅ Git
+- ✅ FFmpeg
+- ✅ API Key de OpenAI (opcional para modo IA)
+- ✅ Número de WhatsApp válido
+
+---
+
+### **📌 Instalación manual por termux**
+> Nota: Copie y pegue los comandos en termux uno por uno.
+
+```bash
+termux-setup-storage
+```
+
+```bash
+pkg update && pkg upgrade
+```
+
+```bash
+pkg install git nodejs ffmpeg imagemagick -y
+```
+
+```bash
+git clone https://github.com/erenxzy/Rukia-Botv2 && cd Rukia-Botv2
+```
+
+```bash
+npm install
+```
+
+```bash
+npm start
+```
