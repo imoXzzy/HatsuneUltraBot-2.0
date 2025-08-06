@@ -96,7 +96,6 @@ const responseMessage = `
 ✦ 🎤 *SUB-BOTS CONECTADOS:* ${totalUsers || '0'}
 
 ${replyMessage.trim()}
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m})
 break   
