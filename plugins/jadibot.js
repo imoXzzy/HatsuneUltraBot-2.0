@@ -75,7 +75,7 @@ const message = users.map((v, index) =>
       ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) 
       : 'Desconocido'}
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯`
-).join('\n\n');
+).join('\n\n'); // <-- salto de línea doble
 const replyMessage = message.length === 0 
   ? `💙🎤 Ningún *Sub-Bot* conectado... ¡Miku dice que tengas paciencia, pronto volverán! 🌸` 
   : message;
