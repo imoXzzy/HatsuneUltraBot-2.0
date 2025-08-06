@@ -3,5 +3,5 @@
 ---
 
 <p align="center">
-  <img src="https://cdn.russellxz.click/56373adc.jpeg" alt="HatsuneLogs">
+  <img src="https://cdn.russellxz.click/53f32234.jpeg" alt="HatsuneLogs">
 </p>
