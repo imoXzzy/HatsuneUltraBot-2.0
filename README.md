@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="https://cdn.russellxz.click/2613239e.gif" alt="HatsuneLogs">
+  <img src="https://cdn.russellxz.click/2613239e.mp4" alt="HatsuneLogs">
 </p>
 
 # 🎶 HatsuneUltraBot 💙
