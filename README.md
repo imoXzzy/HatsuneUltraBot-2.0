@@ -46,7 +46,6 @@ Perfecto para quienes buscan un grupo más interactivo, estético y lleno de ene
 - ✅ [Termux](https://f-droid.org/packages/com.termux/) (si usas Android)
 - ✅ Git
 - ✅ FFmpeg
-- ✅ API Key de OpenAI (opcional para modo IA)
 - ✅ Número de WhatsApp válido
 
 ---
