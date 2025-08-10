@@ -1,6 +1,7 @@
-"name": "HatsuneUltraBot",
+{
+"name": "HatsuneUltra",
 "version": "2.2.0",
-"description": "WhatsApp Bot Multi Device",
+"description": "WhatsApp Bot Multi Device Ultra",
 "main": "index.js",
 "type": "module",
 "directories": {
